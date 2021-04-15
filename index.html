@@ -6,152 +6,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./resources/css/style.css" rel="stylesheet">
+    <link href="./resources/css/headbar.css" rel="stylesheet">
+    <link href="./resources/css/menu_left.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="resources/img/Logo.PNG" style="background-color: none;">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/da46a81a92.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
-        <div class="headbar clearfix">
-            <div>
-                <div class="menu-btn">
-                    <button>
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                <a href="#" class="logo-link">
-                    <img class="logo clearfix" src="resources/img/MeTube.png" alt="Logo">
-                </a>
-            </div>
-            <div class="searchbar">
-                <input class="search-input" type="text" content="text" placeholder=" Tìm kiếm">
-                <button class="search-btn">
-                    <i class="fas fa-search"></i>
+        <div id="headbar" class="flex bd-solid">
+            <div id="menu-btn">
+                <button type="button">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <div class="login">
-                <button>Đăng nhập</button>
+            <div id="logo" class="clearfix">
+                <a href="index.html">
+                    <img src="resources/img/Logo.png">
+                    <h1 class="padding-smm black">Me<span class="bg-red-fresh white padding-smm bdr-sm">Tube</span></h1>
+                </a>
             </div>
-            <div class="upload">
-                <a href="#">
+            <div id="searchbar">
+                <form onsubmit="event.preventDefault();" role="search">
+                    <label for="search">Search for content</label>
+                    <input id="search" type="search" placeholder="Search..." autofocus required />
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+            <div class="flex" id="right-btns">
+                <div id="notify">
+                    <span>9+</span>
+                    <i class="far fa-bell"></i>
+                </div>
+                <div id="upload" class="btns">
+                    <button type="button">
                     <i class="fas fa-cloud-upload-alt"></i>
-                </a>
-            </div>
-        </div>
-        <div class="menu-left scroll-hidden">
-            <div class="watch">
-                <a href="#" class="foryou chose">
-                    <i class="fas fa-home"></i>
-                    <span>Trang chủ</span></a>
-                <a href="#" class="following chose">
-                    <i class="fas fa-users"></i>
-                    Đang theo dõi
-                </a>
-                <a href="#" class="trending chose">
-                    <i class="fas fa-fire"></i>
-                    Thịnh hành
-                </a>
-            </div>
-            <div class="library">
-                <a href="#" class="lib chose">
-                    <i class="far fa-play-circle"></i>
-                    <span>Thư viện</span>
-                </a>
-                <a href="#" class="watched chose">
-                    <i class="fas fa-history"></i>
-                    <span>Đã xem</span>
-                </a>
+                </button>
+                </div>
+                <div id="messages" class="btns">
+                    <button type="button">
+                        <i class="far fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="button" id="login">
+                    <a class="white bg-red-fresh" href="login.html">Đăng nhập</a>
+                </div>
             </div>
         </div>
     </header>
-    <section>
-        <div class="content scroll-hidden">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="video-caption">
-                            <div class="user">
-                                <a href="#">
-                                    <img src="resources/img/Avt_Itachi.PNG">
-                                    <span>Itachi</span>
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <p>
-                                    Two week to edit...
-                                    A secend to like...<br>
-                                    #naruto #obito #studio
-                                </p>
-                            </div>
+    <div id="main" class="flex bd-solid">
+        <div id="menu-left" class="container bd-solid">
+            <ul>
+                <li class="padding">
+                    <a href="index.html" class="sm-m bold red">
+                        <div class="menu-item">
+                            <i class="fas fa-home"></i>
+                            <span class="">Trang chủ</span>
                         </div>
-                        <div class="video">
-                            <video controls>
-                                <source src="resources/data/video/Test.mp4">
-                            </video>
+                    </a>
+                </li>
+                <li class="padding">
+                    <a href="index.html" class="sm bold space-cadet">
+                        <div class="menu-item">
+                            <i class="fas fa-users"></i>
+                            <span class="">Đang theo dõi</span>
                         </div>
-                        <div class="interactive">
-
-
-
-                        </div>
+                    </a>
+                </li>
+                <li class="padding">
+                    <div class="menu-item">
+                        <a href="index.html" class="sm bold space-cadet">
+                            <i class="fas fa-fire-alt"></i>
+                            <span>Thịnh hành</span>
+                        </a>
                     </div>
-                    <div class="col-sm">
-                        <div class="comments">
-                            <div class="comment">
-                                <div class=user>
-
-                                </div>
-                                <p class="cmt">
-
-                                </p>
-                            </div>
-                        </div>
+                </li>
+                <li class="padding">
+                    <div class="menu-item">
+                        <a href="index.html" class="sm bold space-cadet">
+                            <i class="fas fa-book-open"></i>
+                            <span>Thư viện</span>
+                        </a>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="video-caption">
-                            <div class="user">
-                                <a href="#">
-                                    <img src="resources/img/Avt_Itachi.PNG">
-                                    <span>Itachi</span>
-                                </a>
-                            </div>
-                            <div class="caption">
-                                <p>
-                                    Two week to edit...
-                                    A secend to like...<br>
-                                    #naruto #obito #studio
-                                </p>
-                            </div>
-                        </div>
-                        <div class="video">
-                            <video controls>
-                                <source src="resources/data/video/Test.mp4">
-                            </video>
-                        </div>
-                        <div class="interactive">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="comments">
-                            <div class="comment">
-                                <div class=user>
-
-                                </div>
-                                <p class="cmt">
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </li>
+            </ul>
+            <hr style="margin: 10px 0px;">
+            <span class="ta-center opacity black block mg-top mg-bottom">Đề xuất cho bạn</span>
+        </div>
+        <div class="content container bd-solid">
+            <div class="user-block">
+                <a href="">
+                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                    <span class="user-name">Itache</span>
+                    <span class="opacity user-id">@Uchiha_Itachi</span>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>
