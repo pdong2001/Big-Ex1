@@ -1,0 +1,191 @@
+#headbar {
+    padding: 15px;
+    height: 75px;
+    position: relative;
+}
+
+#menu-btn {
+    height: 46px;
+    width: 46px;
+    margin-right: 10px;
+}
+
+#menu-btn button {
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: none;
+    background: none;
+    transition: 0.05s ease;
+}
+
+#menu-btn button:active {
+    background-color: #8d99ae2f;
+    padding: 14px 16px;
+}
+
+#logo {
+    width: fit-content;
+}
+
+#logo a img {
+    height: 36px;
+    float: left;
+}
+
+#logo a h1 {
+    float: left;
+    font-size: 23px;
+}
+
+#searchbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Search input */
+
+:root {
+    --rad: .2rem;
+    --dur: .3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #EF233C;
+    --font-fam: 'Lato', sans-serif;
+    --height: 2rem;
+    --btn-width: 4rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+#searchbar form {
+    position: relative;
+    width: 30vw;
+    background: var(--color-brand);
+    border: 1px solid var(--color-dark);
+    border-radius: var(--rad);
+}
+
+#searchbar input,
+#searchbar button {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-dark);
+    font-size: 1rem;
+}
+
+#searchbar input[type="search"] {
+    outline: 0;
+    width: 100%;
+    background: var(--color-light);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none;
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+
+#searchbar button {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+}
+
+#searchbar input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+}
+
+#searchbar input:not(:placeholder-shown)+button {
+    display: block;
+}
+
+#searchbar label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+#right-btns {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+}
+
+
+/* Login */
+
+#login {
+    width: 100%;
+    margin: 0px 10px;
+}
+
+.button a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+/* upload */
+
+#upload {
+    margin: 0px 10px;
+}
+
+.btns button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.btns button i {
+    font-size: 30px;
+    color: #2B2D42;
+}
+
+
+/* Messages */
+
+#messages {
+    margin: 0px 10px;
+}
+
+
+/* Notify */
+
+#notify {
+    margin: 0px 10px;
+    position: relative;
+}
+
+#notify span {
+    position: absolute;
+    font-size: 10px;
+    background-color: #EF233C;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    left: 10px;
+    top: -6px;
+    color: white;
+}
+
+#notify i {
+    font-size: 26px;
+}
