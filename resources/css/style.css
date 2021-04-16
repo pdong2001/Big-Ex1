@@ -11,6 +11,7 @@ html {
 
 body {
     background-color: #ffffff;
+    overflow: hidden;
 }
 
 .clearfix:after {
@@ -50,6 +51,10 @@ body {
     background-color: red;
 }
 
+.bg-white {
+    background-color: #ffffff;
+}
+
 .bg-whitesomke {
     background-color: whitesmoke;
 }
@@ -84,22 +89,6 @@ body {
 
 
 /*Font*/
-
-.large {
-    font-size: 3vw;
-}
-
-.small {
-    font-size: 1vw;
-}
-
-.sm-m {
-    font-size: 1.5vw;
-}
-
-.medium {
-    font-size: 2vw;
-}
 
 .regular {
     font-weight: 500;
@@ -197,6 +186,10 @@ body {
     display: block;
 }
 
+.relative {
+    position: relative;
+}
+
 
 /*Border*/
 
@@ -206,4 +199,28 @@ body {
 
 .bd-solid {
     border: 1px solid;
+}
+
+.box-shd {
+    box-shadow: 2px 2px 2px #505050;
+}
+
+
+/* Scroll bar */
+
+.scroll-hidden {
+    overflow-y: scroll;
+}
+
+.scroll-hidden::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-hidden:hover::-webkit-scrollbar-thumb {
+    background: rgb(202, 202, 202);
+    border-radius: 10px;
 }
