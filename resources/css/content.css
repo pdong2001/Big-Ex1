@@ -1,5 +1,4 @@
 .contents {
-    overflow-y: auto;
     background-color: whitesmoke;
 }
 
@@ -19,18 +18,14 @@
     margin: 10px;
 }
 
-#content-row .left {}
-
-#content-row .right {}
-
 @media only screen and (max-width: 768px) {
     #content-row {
         display: block;
         height: fit-content;
     }
-    #content-row .container {
+    /* #content-row .container {
         height: 70vh;
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) {
