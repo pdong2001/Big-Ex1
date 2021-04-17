@@ -2,8 +2,12 @@
     background-color: whitesmoke;
 }
 
+.contents div {
+    border: 1px solid;
+}
+
 #content-row {
-    height: 80vh;
+    height: 670px;
     margin: 20px 10%;
     background-color: #ffffff;
     border-radius: .5rem;
@@ -16,6 +20,30 @@
 
 #content-row .left .user-block {
     margin: 10px;
+}
+
+.center {
+    width: 15%;
+}
+
+#content-row .left,
+#content-row .right,
+#content-row .center {
+    display: block;
+}
+
+.caption {
+    height: 15%;
+}
+
+.video {
+    height: calc(85% - 75px);
+    display: block;
+}
+
+.video video {
+    display: block;
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 768px) {
