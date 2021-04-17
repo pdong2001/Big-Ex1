@@ -1,10 +1,13 @@
 .contents {
-    overflow-y: auto;
     background-color: whitesmoke;
 }
 
+.contents div {
+    border: 1px solid;
+}
+
 #content-row {
-    height: 80vh;
+    height: 670px;
     margin: 20px 10%;
     background-color: #ffffff;
     border-radius: .5rem;
@@ -19,18 +22,38 @@
     margin: 10px;
 }
 
-#content-row .left {}
+.center {
+    width: 15%;
+}
 
-#content-row .right {}
+#content-row .left,
+#content-row .right,
+#content-row .center {
+    display: block;
+}
+
+.caption {
+    height: 15%;
+}
+
+.video {
+    height: calc(85% - 75px);
+    display: block;
+}
+
+.video video {
+    display: block;
+    border-radius: 10px;
+}
 
 @media only screen and (max-width: 768px) {
     #content-row {
         display: block;
         height: fit-content;
     }
-    #content-row .container {
+    /* #content-row .container {
         height: 70vh;
-    }
+    } */
 }
 
 @media only screen and (min-width: 768px) {
