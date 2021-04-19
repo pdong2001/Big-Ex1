@@ -1,9 +1,12 @@
 var readMore = document.querySelector('#showmore');
 var userBlock = document.querySelectorAll('#propose .user-block');
+var videoButton = document.querySelectorAll('.play-btn');
+var divVideo = document.querySelectorAll('.video');
+var contentVideo = document.querySelectorAll('.video video');
+var likeButton = document.querySelectorAll('.center .like button');
 for (var index = 0; index < userBlock.length && index < 4; ++index) {
     userBlock[index].style.display = 'block';
 }
-
 readMore.addEventListener('click', (e) => {
     for (var index = 4; index < userBlock.length; ++index) {
         if (userBlock[index].style.display == 'block') {
@@ -17,3 +20,33 @@ readMore.addEventListener('click', (e) => {
         }
     }
 });
+
+function getStyle(el, styleProp) {
+    var value, defaultView = el.ownerDocument.defaultView;
+    // W3C standard way:
+    if (defaultView && defaultView.getComputedStyle) {
+        // sanitize property name to css notation (hypen separated words eg. font-Size)
+        styleProp = styleProp.replace(/([A-Z])/g, "-$1").toLowerCase();
+        return defaultView.getComputedStyle(el, null).getPropertyValue(styleProp);
+    } else if (el.currentStyle) { // IE
+        // sanitize property name to camelCase
+        styleProp = styleProp.replace(/\-(\w)/g, function(str, letter) {
+            return letter.toUpperCase();
+        });
+        value = el.currentStyle[styleProp];
+        // convert other units to pixels on IE
+        if (/^\d+(em|pt|%|ex)?$/i.test(value)) {
+            return (function(value) {
+                var oldLeft = el.style.left,
+                    oldRsLeft = el.runtimeStyle.left;
+                el.runtimeStyle.left = el.currentStyle.left;
+                el.style.left = value || 0;
+                value = el.style.pixelLeft + "px";
+                el.style.left = oldLeft;
+                el.runtimeStyle.left = oldRsLeft;
+                return value;
+            })(value);
+        }
+        return value;
+    }
+}

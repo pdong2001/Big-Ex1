@@ -2,20 +2,17 @@
     background-color: whitesmoke;
 }
 
-.contents div {
+
+/* .contents div {
     border: 1px solid;
-}
+} */
 
 #content-row {
     height: 670px;
     margin: 20px 10%;
     background-color: #ffffff;
-    border-radius: .5rem;
-    border: 1px solid;
-}
-
-#content-row div {
-    margin: 0px 5px;
+    border-radius: .6rem;
+    box-shadow: 5px 5px 5px rgb(155, 155, 155);
 }
 
 #content-row .left .user-block {
@@ -29,27 +26,100 @@
 #content-row .left,
 #content-row .right,
 #content-row .center {
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-row .center {
+    flex-direction: column-reverse;
+    width: fit-content;
+    border-left: 1px solid;
+    border-right: 1px solid;
 }
 
 .caption {
     height: 15%;
+    margin: 10px 5%;
 }
 
 .video {
     height: calc(85% - 75px);
-    display: block;
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
 
 .video video {
     display: block;
     border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    background-color: black;
+    border: 1px solid;
+}
+
+.center .interactive .interactive-btn button {
+    outline: none;
+    border: none;
+    font-size: 36px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.center .interactive {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 5px 5px;
+}
+
+.center .comment button {
+    background-color: #ffffff;
+    color: black;
+}
+
+.center .share button {
+    background-color: #ffffff;
+    color: black;
+}
+
+.center .interactive {
+    display: flex;
+    justify-content: center;
+}
+
+.right .comment {
+    margin: 5px;
+    height: 100%;
+}
+
+.right .comment-input {}
+
+.comment .comment-content {
+    margin-left: 50px;
+    font-size: 90%;
+}
+
+.comment .interactive {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.comment .interactive a {
+    margin: 0px 10px;
 }
 
 @media only screen and (max-width: 768px) {
     #content-row {
         display: block;
         height: fit-content;
+    }
+    .center .interactive {
+        flex-direction: row;
     }
     /* #content-row .container {
         height: 70vh;
@@ -59,5 +129,274 @@
 @media only screen and (min-width: 768px) {
     #content-row {
         display: flex;
+    }
+}
+
+
+/* Like button */
+
+.like #main-content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.like a {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    text-decoration: none;
+    color: #008a68;
+}
+
+.like svg {
+    cursor: pointer;
+    overflow: visible;
+    width: 60px;
+}
+
+.like svg #heart {
+    transform-origin: center;
+    animation: animateHeartOut 0.3s linear forwards;
+}
+
+.like svg #main-circ {
+    transform-origin: 29.5px 29.5px;
+}
+
+.like #checkbox {
+    display: none;
+}
+
+.like form #checkbox:checked+label svg #heart {
+    transform: scale(0.2);
+    fill: #e2264d;
+    animation: animateHeart 0.3s linear forwards 0.25s;
+}
+
+.like form #checkbox:checked+label svg #main-circ {
+    transition: all 2s;
+    animation: animateCircle 0.3s linear forwards;
+    opacity: 1;
+}
+
+.like form #checkbox:checked+label svg #grp1 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp1 #oval1 {
+    transform: scale(0) translate(0, -30px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp1 #oval2 {
+    transform: scale(0) translate(10px, -50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp2 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp2 #oval1 {
+    transform: scale(0) translate(30px, -15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp2 #oval2 {
+    transform: scale(0) translate(60px, -15px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp3 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp3 #oval1 {
+    transform: scale(0) translate(30px, 0px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp3 #oval2 {
+    transform: scale(0) translate(60px, 10px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp4 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp4 #oval1 {
+    transform: scale(0) translate(30px, 15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp4 #oval2 {
+    transform: scale(0) translate(40px, 50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp5 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp5 #oval1 {
+    transform: scale(0) translate(-10px, 20px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp5 #oval2 {
+    transform: scale(0) translate(-60px, 30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp6 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp6 #oval1 {
+    transform: scale(0) translate(-30px, 0px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp6 #oval2 {
+    transform: scale(0) translate(-60px, -5px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp7 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp7 #oval1 {
+    transform: scale(0) translate(-30px, -15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp7 #oval2 {
+    transform: scale(0) translate(-55px, -30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp2 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp3 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp4 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp5 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp6 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.like form #checkbox:checked+label svg #grp7 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+@keyframes animateCircle {
+    40% {
+        transform: scale(10);
+        opacity: 1;
+        fill: #dd4688;
+    }
+    55% {
+        transform: scale(11);
+        opacity: 1;
+        fill: #d46abf;
+    }
+    65% {
+        transform: scale(12);
+        opacity: 1;
+        fill: #cc8ef5;
+    }
+    75% {
+        transform: scale(13);
+        opacity: 1;
+        fill: transparent;
+        stroke: #cc8ef5;
+        stroke-width: 0.5;
+    }
+    85% {
+        transform: scale(17);
+        opacity: 1;
+        fill: transparent;
+        stroke: #cc8ef5;
+        stroke-width: 0.2;
+    }
+    95% {
+        transform: scale(18);
+        opacity: 1;
+        fill: transparent;
+        stroke: #cc8ef5;
+        stroke-width: 0.1;
+    }
+    100% {
+        transform: scale(19);
+        opacity: 1;
+        fill: transparent;
+        stroke: #cc8ef5;
+        stroke-width: 0;
+    }
+}
+
+@keyframes animateHeart {
+    0% {
+        transform: scale(0.2);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animateHeartOut {
+    0% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
     }
 }
