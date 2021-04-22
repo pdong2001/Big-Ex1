@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>MeTube</title>
+    <title>BisBis - Social Video Network</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./resources/css/style.css" rel="stylesheet">
@@ -19,13 +19,13 @@
 
 <body>
     <header>
-        <div id="headbar" class="flex bd-solid">
+        <div id="headbar" class="flex ">
             <div id="menu-btn">
                 <button type="button">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <div id="logo" class="clearfix">
+            <div id="logo" class="flex clearfix">
                 <a href="index.html">
                     <img src="resources/img/Logo.png">
                     <h1 class="padding-smm black">Bis<span class="bg-red-fresh white padding-smm bdr-sm">Bis</span></h1>
@@ -59,8 +59,8 @@
             </div>
         </div>
     </header>
-    <div id="main" class="flex bd-solid">
-        <div id="menu-left" class="container bd-solid scroll-hidden">
+    <div id="main" class="flex ">
+        <div id="menu-left" class="container  scroll-hidden">
             <ul>
                 <li class="padding">
                     <a href="index.html" class="bold red">
@@ -98,87 +98,17 @@
             <hr style="margin: 10px 0px;">
             <div id="propose">
                 <span class="ta-center black block mg-top mg-bottom mg-right">Đề xuất cho bạn</span>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="user-block">
-                    <a href="">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                        <div class="user-info">
-                            <span class="user-name">Uchiha Itachi</span>
-                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                        </div>
-                    </a>
-                </div>
+                <script src="resources/js/addProposeRow.js"></script>
+
                 <a id="showmore" href="#" class="red bold block mg-right mg-left" style="text-decoration: underline; text-align: right;">
                     Xem thêm
                 </a>
             </div>
             <hr style="margin: 10px 0px;">
         </div>
-        <div class="contents container bd-solid scroll-hidden">
+        <div class="contents container  scroll-hidden">
             <div class="row" id="content-row">
-                <div class="left container bd-solid">
+                <div class="left container ">
                     <div class="user-block">
                         <a href="">
                             <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
@@ -189,48 +119,107 @@
                         </a>
                     </div>
                     <div class="caption">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
                     </div>
                     <div class="video">
-                        <video playsinline autoplay="" name="media" width="100%" height="100%"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
-                        <span></span>
+                        <video playsinline controls autoplay="" name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="center">
+                    <div class="interactive">
+                        <div class="interactive-btn like">
+                            <div>
+                                <form>
+                                    <input type="checkbox" id="itr-1" class="like-checkbox" />
+                                    <label for="itr-1">
+                                    <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                                    <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
+                                    <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5"/>
 
-                </div>
-                <div class="right container bd-solid">
+                                    <g id="grp7" opacity="0" transform="translate(7 6)">
+                                    <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
+                                    <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
+                                    </g>
 
-                </div>
-            </div>
-            <div class="row" id="content-row">
-                <div class="left container bd-solid">
-                    <div class="user-block">
-                        <a href="">
-                            <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                            <div class="user-info">
-                                <span class="user-name">Uchiha Itachi</span>
-                                <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                    <g id="grp6" opacity="0" transform="translate(0 28)">
+                                    <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
+                                    <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
+                                    </g>
+
+                                    <g id="grp3" opacity="0" transform="translate(52 28)">
+                                    <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2"/>
+                                    <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2"/>
+                                    </g>
+
+                                    <g id="grp2" opacity="0" transform="translate(44 6)">
+                                    <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2"/>
+                                    <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2"/>
+                                    </g>
+
+                                    <g id="grp5" opacity="0" transform="translate(14 50)">
+                                    <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2"/>
+                                    <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2"/>
+                                    </g>
+
+                                    <g id="grp4" opacity="0" transform="translate(35 50)">
+                                    <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2"/>
+                                    <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2"/>
+                                    </g>
+
+                                    <g id="grp1" opacity="0" transform="translate(24)">
+                                    <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2"/>
+                                    <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2"/>
+                                    </g>
+                                    </g>
+                                    </svg>
+                                    </label>
+                                </form>
                             </div>
-                        </a>
-                    </div>
-                    <div class="caption">
-                        <p>
-                            Cuộc sống thật khó khăn nhưng nếu bạn vượt qua được nỗi sợ hãi ấy bạn sẽ hạnh phúc #levito #hãy #kiên trì..
-                        </p>
-                    </div>
-                    <div class="video">
-                        <video playsinline autoplay="" name="media" width="100%" height="100%"><source src="resources/data/video/Video-2.mp4" type="video/mp4"></video>
+                        </div>
+                        <div class="interactive-btn comment">
+                            <button class="">
+                            <i class="far fa-comment-dots"></i>
+                        </button>
+                        </div>
+                        <div class="interactive-btn share">
+                            <button class="">
+                            <i class="far fa-share-square"></i>
+                        </button>
+                        </div>
                     </div>
                 </div>
-                <div class="center">
-
-                </div>
-                <div class="right container bd-solid">
-
+                <div class="right container ">
+                    <div class="comment">
+                        <div class="comment-block">
+                            <div class="user-block">
+                                <a href="">
+                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                    <div class="user-info">
+                                        <span class="user-name">Uchiha Itachi</span>
+                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                        </div>
+                        <div class="interactive">
+                            <div>
+                                <span class="opacity">36 phút trước</span>
+                                <a href=""><i class="fas fa-reply"></i>Trả lời</a>
+                                <a href=""><i class="far fa-heart"></i>Thích</a>
+                                <a href=""><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <script src="resources/js/addContentRow.js"></script>
         </div>
-        <script src="resources/js/functions.js"></script>
+        <script src="resources/js/functions.js">
+        </script>
 </body>
 
 </html>

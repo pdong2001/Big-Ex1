@@ -28,4 +28,5 @@ a {
 #propose .user-block {
     box-shadow: 2px 2px 2px whitesmoke;
     display: none;
+    margin: 15px 10px;
 }
