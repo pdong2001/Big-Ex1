@@ -244,6 +244,7 @@ body {
 
 .user-name {
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .user-id {
