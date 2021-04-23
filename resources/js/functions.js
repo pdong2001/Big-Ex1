@@ -50,3 +50,18 @@ function getStyle(el, styleProp) {
         return value;
     }
 }
+
+function btnMenu_Click() {
+    var menuLeft = document.getElementById('menu-left');
+    if (menuLeft.style.display != 'none') {
+        menuLeft.style.display = 'none';
+    } else {
+        menuLeft.style.display = 'block'
+    }
+}
+
+function onResize() {
+    if (window.innerWidth <= 768) {
+        document.getElementById('menu-left').style.display = 'none';
+    }
+}

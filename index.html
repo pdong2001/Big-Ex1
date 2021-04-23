@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+
     <title>BisBis - Social Video Network</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,14 +17,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="resources/css/content.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/da46a81a92.js" crossorigin="anonymous"></script>
-
 </head>
 
-<body>
+<body onresize="onResize()">
     <header>
         <div id="headbar" class="flex ">
             <div id="menu-btn">
-                <button type="button">
+                <button type="button" onClick="btnMenu_Click()">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -62,7 +62,7 @@
         </div>
     </header>
     <div id="main" class="flex ">
-        <div id="menu-left" class="container  scroll-hidden">
+        <div id="menu-left" class="container scroll-hidden">
             <ul>
                 <li class="padding">
                     <a href="index.html" class="bold red">
@@ -143,7 +143,7 @@
                                     <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
                                     <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
                                     </g>
-
+                                    
                                     <g id="grp6" opacity="0" transform="translate(0 28)">
                                     <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
                                     <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
@@ -192,29 +192,31 @@
                     </div>
                 </div>
                 <div class="right container ">
-                    <div class="comment">
-                        <div class="comment-block">
-                            <div class="user-block">
-                                <a href="">
-                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                                    <div class="user-info">
-                                        <span class="user-name">Uchiha Itachi</span>
-                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                                    </div>
-                                </a>
+                    <div class="container scroll-hidden">
+                        <div class="comment">
+                            <div class="comment-block">
+                                <div class="user-block">
+                                    <a href="">
+                                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                        <div class="user-info">
+                                            <span class="user-name">Uchiha Itachi</span>
+                                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="comment-content">
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                            </p>
-                        </div>
-                        <div class="interactive">
-                            <div>
-                                <span class="opacity">36 phút trước</span>
-                                <a href=""><i class="fas fa-reply"></i>Trả lời</a>
-                                <a href=""><i class="far fa-heart"></i>Thích</a>
-                                <a href=""><i class="fas fa-ellipsis-h"></i></a>
+                            <div class="comment-content">
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                                </p>
+                            </div>
+                            <div class="interactive">
+                                <div>
+                                    <span class="opacity">36 phút trước</span>
+                                    <a href=""><i class="fas fa-reply"></i>Trả lời</a>
+                                    <a href=""><i class="far fa-heart"></i>Thích</a>
+                                    <a href=""><i class="fas fa-ellipsis-h"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>

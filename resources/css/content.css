@@ -33,8 +33,6 @@
 #content-row .center {
     flex-direction: column-reverse;
     width: fit-content;
-    border-left: 1px solid;
-    border-right: 1px solid;
 }
 
 .caption {
@@ -94,10 +92,7 @@
 
 .right .comment {
     margin: 5px;
-    height: 100%;
 }
-
-.right .comment-input {}
 
 .comment .comment-content {
     margin-left: 50px;
@@ -116,25 +111,6 @@
 .comment .interactive a {
     margin: 0px 10px;
     font-weight: 300;
-}
-
-@media only screen and (max-width: 768px) {
-    #content-row {
-        display: block;
-        height: fit-content;
-    }
-    .center .interactive {
-        flex-direction: row;
-    }
-    /* #content-row .container {
-        height: 70vh;
-    } */
-}
-
-@media only screen and (min-width: 768px) {
-    #content-row {
-        display: flex;
-    }
 }
 
 
@@ -403,5 +379,32 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #content-row {
+        display: block;
+        height: fit-content;
+    }
+    .center .interactive {
+        flex-direction: row;
+    }
+    .center {
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+    .right .scroll-hidden {
+        height: 50vh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #content-row {
+        display: flex;
+    }
+    .center {
+        border-left: 1px solid;
+        border-right: 1px solid;
     }
 }
