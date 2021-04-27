@@ -1,18 +1,14 @@
 .contents {
     background-color: whitesmoke;
+    border: 1px solid rgb(200, 200, 200);
 }
-
-
-/* .contents div {
-    border: 1px solid;
-} */
 
 #content-row {
     height: 670px;
-    margin: 20px 10%;
+    margin: 20px 5%;
     background-color: #ffffff;
     border-radius: .6rem;
-    box-shadow: 5px 5px 5px rgb(155, 155, 155);
+    box-shadow: 5px 5px 10px rgb(200, 200, 200);
 }
 
 #content-row .left .user-block {
@@ -96,10 +92,26 @@
 
 .comment .comment-content {
     margin-left: 50px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 15px;
+    position: relative;
+}
+
+.comment-content .like-count {
+    position: absolute;
+    right: 10px;
+    bottom: -5px;
+}
+
+.comment-content .like-count span {
+    border-radius: 15px;
+    background: rgb(220, 220, 220);
+    padding: 2px;
 }
 
 .comment .comment-content p {
     font-family: 'Open Sans Condensed', sans-serif;
+    padding: 10px;
 }
 
 .comment .interactive {
@@ -113,18 +125,24 @@
     font-weight: 300;
 }
 
+.cmt-like {
+    display: inline-block;
+}
+
+.comment .interactive div {
+    user-select: none;
+}
+
+.cmt-like input {
+    display: none;
+}
+
+.cmt-like input:checked+label {
+    color: #EF233C;
+}
+
 
 /* Like button */
-
-.like #main-content {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 .like a {
     font-size: 12px;

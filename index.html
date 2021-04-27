@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<script>
+    function tabClick() {
+        console.log("clicked");
+    }
+</script>
 
-<head>
+<head onclick="tabClick()">
 
     <title>BisBis - Social Video Network</title>
     <meta charset="UTF-8">
@@ -116,7 +121,7 @@
             <div class="row" id="content-row">
                 <div class="left container ">
                     <div class="user-block">
-                        <a href="">
+                        <a href="#">
                             <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
                             <div class="user-info">
                                 <span class="user-name">Uchiha Itachi</span>
@@ -213,13 +218,21 @@
                                 <p>
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
                                 </p>
+                                <div class="like-count" id="jtx-1-cmt-1-like-count">
+                                    <span><i class="cmt-heart far fa-heart"></i> 
+                                        <span class="count">999</span>
+                                    </span>
+                                </div>
                             </div>
                             <div class="interactive">
                                 <div>
                                     <span class="opacity">36 phút trước</span>
-                                    <a href=""><i class="fas fa-reply"></i>Trả lời</a>
-                                    <a href=""><i class="far fa-heart"></i>Thích</a>
-                                    <a href=""><i class="fas fa-ellipsis-h"></i></a>
+                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                                    <div class="cmt-like">
+                                        <input type="checkbox" id="jtx-1-cmt-1">
+                                        <label for="jtx-1-cmt-1"><i class="cmt-heart far fa-heart"></i>Thích</label>
+                                    </div>
+                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
                                 </div>
                             </div>
                         </div>

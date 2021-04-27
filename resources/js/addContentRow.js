@@ -1,8 +1,7 @@
-var id = "jsx-";
-
 function addContentRow() {
-    var idNumber = document.querySelectorAll('.like-checkbox').length;
+    var idNumber = document.querySelectorAll('.like-checkbox').length + 1;
     var rowComment = '';
+    var userLink = './personal_page.html'
     for (var i = 0; i < 100; i++) {
         rowComment +=
             '                       <div class="comment">' +
@@ -26,7 +25,10 @@ function addContentRow() {
             '                               <div>' +
             '                                    <span class="opacity">36 phút trước</span>' +
             '                                    <a href=""><i class="fas fa-reply"></i>Trả lời</a>' +
-            '                                    <a href=""><i class="far fa-heart"></i>Thích</a>' +
+            '                                       <div class="cmt-like">' +
+            '                                           <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '">' +
+            '                                           <label for="jtx-' + idNumber + '-cmt-' + i + '"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
+            '                                       </div>' +
             '                                    <a href=""><i class="fas fa-ellipsis-h"></i></a>' +
             '                                </div>' +
             '                            </div>' +
@@ -35,7 +37,7 @@ function addContentRow() {
     var myvar = '<div class="row" id="content-row">' +
         '                <div class="left container ">' +
         '                    <div class="user-block">' +
-        '                        <a href="">' +
+        '                        <a href="' + userLink + '">' +
         '                            <img class="user-avt" src="resources/img/Avt_Itachi.PNG">' +
         '                            <div class="user-info">' +
         '                                <span class="user-name">Uchiha Itachi</span>' +
@@ -114,8 +116,6 @@ function addContentRow() {
         '                </div>' +
         '            </div>';
     document.write(myvar);
-
-
 };
 addContentRow();
 addContentRow();

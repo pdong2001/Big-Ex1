@@ -152,8 +152,8 @@
     border: none;
 }
 
-.btns button i {
-    font-size: 30px;
+.btns button svg {
+    font-size: 26px;
     color: #2B2D42;
 }
 
@@ -186,6 +186,6 @@
     color: white;
 }
 
-#notify i {
+#notify svg {
     font-size: 26px;
 }

@@ -65,3 +65,13 @@ function onResize() {
         document.getElementById('menu-left').style.display = 'none';
     }
 }
+document.querySelectorAll('.interactive .like input').forEach(
+    elem => {
+        elem.addEventListener('change', () => {
+            var
+            if (elem.checked) {
+
+            }
+        });
+    }
+);
