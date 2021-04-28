@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<script>
-    function tabClick() {
-        console.log("clicked");
-    }
-</script>
+<html lang="en">
 
 <head onclick="tabClick()">
 
@@ -15,7 +10,6 @@
     <link href="resources/css/headbar.css" rel="stylesheet">
     <link href="resources/css/menu_left.css" rel="stylesheet">
     <link href="resources/css/content.css" rel="stylesheet" type="text/css">
-
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="resources/img/Logo.PNG" style="background-color: none;">
@@ -75,7 +69,7 @@
         <div id="menu-left" class="container scroll-hidden">
             <ul>
                 <li class="padding">
-                    <a href="index.html" class="bold red">
+                    <a href="#" class="bold red">
                         <div class="menu-item">
                             <i class="fas fa-home"></i>
                             <span class="">Trang chủ</span>
@@ -83,7 +77,7 @@
                     </a>
                 </li>
                 <li class="padding">
-                    <a href="index.html" class="bold space-cadet">
+                    <a href="#" class="bold space-cadet">
                         <div class="menu-item">
                             <i class="fas fa-users"></i>
                             <span class="">Đang theo dõi</span>
@@ -92,7 +86,7 @@
                 </li>
                 <li class="padding">
                     <div class="menu-item">
-                        <a href="index.html" class="bold space-cadet">
+                        <a href="#" class="bold space-cadet">
                             <i class="fas fa-fire-alt"></i>
                             <span>Thịnh hành</span>
                         </a>
@@ -100,7 +94,7 @@
                 </li>
                 <li class="padding">
                     <div class="menu-item">
-                        <a href="index.html" class="bold space-cadet">
+                        <a href="#" class="bold space-cadet">
                             <i class="fas fa-book-open"></i>
                             <span>Thư viện</span>
                         </a>
@@ -134,7 +128,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
                     </div>
                     <div class="video">
-                        <video playsinline controls autoplay="" name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
+                        <video id='jtx-0-video' playsinline controls autoplay="" name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="center">
@@ -190,9 +184,9 @@
                             </div>
                         </div>
                         <div class=" interactive-btn comment">
-                            <button class="">
+                            <button for="jtx-0-cmt-show" class="">
                             <i class="far fa-comment-dots"></i>
-                        </button>
+                                </button>
                         </div>
                         <div class="interactive-btn share">
                             <button class="">
@@ -265,11 +259,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="comment-input bottom">
-                            <div>
-                                <input type="text" placeholder="Bình luận">
-                                <button><i class="far fa-paper-plane"></i></button>
-                            </div>
+                    </div>
+                    <div class="comment-input bottom">
+                        <div>
+                            <input type="text" placeholder="Bình luận">
+                            <button><i class="far fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>

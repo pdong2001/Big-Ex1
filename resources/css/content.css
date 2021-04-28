@@ -24,11 +24,7 @@
 .content-row .center {
     display: flex;
     flex-direction: column;
-}
-
-.content-row .center {
-    flex-direction: column-reverse;
-    width: fit-content;
+    position: relative;
 }
 
 .caption {
@@ -53,37 +49,29 @@
     border: 1px solid;
 }
 
-.center .interactive .interactive-btn button {
-    outline: none;
-    border: none;
-    font-size: 36px;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    margin: 5px;
-    cursor: pointer;
+.content-row .center {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-.center .interactive {
+.content-row .center .interactive {
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    margin: 5px 5px;
-}
-
-.center .comment button {
-    background-color: #ffffff;
-    color: black;
-}
-
-.center .share button {
-    background-color: #ffffff;
-    color: black;
-}
-
-.center .interactive {
-    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.center .comment,
+.center .share {
+    margin: 10px;
+}
+
+.center button {
+    font-size: 200%;
+    color: rgb(65, 65, 65);
+    outline: none;
+    border: none;
+    background: none;
 }
 
 .right .comment {
