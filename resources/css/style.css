@@ -127,6 +127,15 @@ body {
     display: flex;
 }
 
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.relative {
+    position: relative;
+}
+
 .inline-block {
     display: inline-block;
 }

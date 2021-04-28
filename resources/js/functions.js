@@ -64,14 +64,44 @@ function onResize() {
     if (window.innerWidth <= 768) {
         document.getElementById('menu-left').style.display = 'none';
     }
-}
-document.querySelectorAll('.interactive .like input').forEach(
+};
+
+document.querySelectorAll('.cmt-like input').forEach(
     elem => {
         elem.addEventListener('change', () => {
-            var
+            var likeCount = document.querySelector('#' + elem.id + '-like-count span');
+            if (likeCount.innerHTML == '') {
+                likeCount.innerHTML = 0;
+            }
             if (elem.checked) {
-
+                likeCount.innerHTML = Number(likeCount.innerHTML) + 1;
+            } else {
+                likeCount.innerHTML = Number(likeCount.innerHTML) - 1;
             }
         });
     }
 );
+
+{
+    /* <div class="comment-input bottom">
+    <div>
+        <input type="text" placeholder="Bình luận">
+        <button><i class="far fa-paper-plane"></i></button>
+    </div>
+    </div> */
+}
+
+// function addCommentInput(parent) {
+//     var Comment = document.createElement('div');
+//     var input = document.createElement('input');
+//     var button = document.createElement('button');
+//     var i = document.createElement('i');
+//     var div = document.createElement('div');
+//     i.className = "far fa-paper-plane";
+//     input.placeholder = 'Bình luận';
+//     button.appendChild(i);
+//     div.appendChild(input);
+//     div.appendChild(button);
+//     Comment.appendChild(div);
+//     parent.appendChild(Comment);
+// }

@@ -3,7 +3,7 @@
     border: 1px solid rgb(200, 200, 200);
 }
 
-#content-row {
+.content-row {
     height: 670px;
     margin: 20px 5%;
     background-color: #ffffff;
@@ -11,7 +11,7 @@
     box-shadow: 5px 5px 10px rgb(200, 200, 200);
 }
 
-#content-row .left .user-block {
+.content-row .left .user-block {
     margin: 10px;
 }
 
@@ -19,14 +19,14 @@
     width: 15%;
 }
 
-#content-row .left,
-#content-row .right,
-#content-row .center {
+.content-row .left,
+.content-row .right,
+.content-row .center {
     display: flex;
     flex-direction: column;
 }
 
-#content-row .center {
+.content-row .center {
     flex-direction: column-reverse;
     width: fit-content;
 }
@@ -103,10 +103,11 @@
     bottom: -5px;
 }
 
-.comment-content .like-count span {
+.comment-content .like-count {
     border-radius: 15px;
     background: rgb(220, 220, 220);
-    padding: 2px;
+    padding: 2px 5px;
+    min-width: 50px;
 }
 
 .comment .comment-content p {
@@ -139,6 +140,35 @@
 
 .cmt-like input:checked+label {
     color: #EF233C;
+}
+
+.comment-input {
+    padding: 10px 5px;
+    background: rgb(220, 220, 220);
+    width: 100%;
+}
+
+.comment-input div {
+    height: 35px;
+    display: flex;
+    background: white;
+    border-radius: 15px;
+}
+
+.comment-input input {
+    font-size: 125%;
+    width: 100%;
+    margin-left: 15px;
+    outline: none;
+    border: none;
+}
+
+.comment-input button {
+    width: 10%;
+    outline: none;
+    border: none;
+    margin-right: 5px;
+    background: none;
 }
 
 
@@ -401,7 +431,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #content-row {
+    .content-row {
         display: block;
         height: fit-content;
     }
@@ -418,7 +448,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-    #content-row {
+    .content-row {
         display: flex;
     }
     .center {
