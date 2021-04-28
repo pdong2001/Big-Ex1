@@ -82,26 +82,12 @@ document.querySelectorAll('.cmt-like input').forEach(
     }
 );
 
-{
-    /* <div class="comment-input bottom">
-    <div>
-        <input type="text" placeholder="Bình luận">
-        <button><i class="far fa-paper-plane"></i></button>
-    </div>
-    </div> */
-}
+document.querySelectorAll('.video video').forEach(elem => {
+    elem.addEventListener('play', () => {
+        document.querySelectorAll('.video video:not(#' + elem.id + ')').forEach(video => {
+            video.pause();
+        });
+    });
+});
 
-// function addCommentInput(parent) {
-//     var Comment = document.createElement('div');
-//     var input = document.createElement('input');
-//     var button = document.createElement('button');
-//     var i = document.createElement('i');
-//     var div = document.createElement('div');
-//     i.className = "far fa-paper-plane";
-//     input.placeholder = 'Bình luận';
-//     button.appendChild(i);
-//     div.appendChild(input);
-//     div.appendChild(button);
-//     Comment.appendChild(div);
-//     parent.appendChild(Comment);
-// }
+console.log($('.video video'));
