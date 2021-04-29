@@ -1,11 +1,8 @@
-:root {
-    --space-cadet: #2B2D42;
-}
-
 #menu-left {
     z-index: 1;
     background-color: #ffffff;
     height: calc(100vh - 75px);
+    width: fit-content;
 }
 
 #main {
@@ -22,8 +19,8 @@ a {
 }
 
 .menu-item span {
-    position: absolute;
-    left: 60px;
+    position: relative;
+    left: 26px;
 }
 
 #propose .user-block {
@@ -35,14 +32,19 @@ a {
 
 @media only screen and (max-width: 768px) {
     #menu-left {
-        width: 15rem;
+        width: 100%;
         position: absolute;
+        flex-direction: column;
+    }
+    .cover-layer {
+        width: 50%;
+        background: rgba(60, 60, 60, 0.6);
     }
 }
 
 @media only screen and (min-width: 768px) {
     #menu-left {
-        width: 17rem;
+        width: 20%;
         position: relative;
     }
 }

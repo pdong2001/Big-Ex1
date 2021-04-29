@@ -1,15 +1,9 @@
-// function randomPath() {
-//     var i = Math.floor((Math.random() * 10));
-//     path = 'resources/data/video/Video-' + i + '.mp4';
-//     return path;
-// }
-
 function addRowContent(path) {
     var idNumber = $('.content-row').length;
     var comment = '';
     for (var i = 0; i < 10; i++) {
         comment +=
-            '                        <div class="comment">' +
+            '                        <div class="comment" id=jtx-' + idNumber + '-cmt-' + i + '>' +
             '                            <div class="user-block">' +
             '                                <a href="personal_page.html">' +
             '                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">' +
@@ -33,12 +27,20 @@ function addRowContent(path) {
             '                                    <span class="opacity">36 phút trước</span>' +
             '                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>' +
             '                                    <div class="cmt-like">' +
-            '                                        <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '">' +
-            '                                        <label for="jtx-' + idNumber + '-cmt-' + i + '"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
+            '                                        <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '-like">' +
+            '                                        <label for="jtx-' + idNumber + '-cmt-' + i + '-like"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
             '                                    </div>' +
             '                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>' +
             '                                </div>' +
             '                            </div>' +
+            '                               <div class="comment-reply-container">' +
+            '                               <div class="comment-input" id="jtx-' + idNumber + '-cmt-' + i + '-input">' +
+            '                                    <div>' +
+            '                                        <input type="text" placeholder="Bình luận">' +
+            '                                        <button><i class="far fa-paper-plane"></i></button>' +
+            '                                    </div>' +
+            '                                </div>' +
+            '                                </div>' +
             '                        </div>';
     }
 
@@ -57,7 +59,7 @@ function addRowContent(path) {
         '                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.' +
         '                    </div>' +
         '                    <div class="video">' +
-        '                        <video id="jtx-' + idNumber + '-video" playsinline controls name="media"><source src="' + path + '" type="video/mp4"></video>' +
+        '                        <video id="jtx-' + idNumber + '-video" playsinline loop controls name="media"><source src="' + path + '" type="video/mp4"></video>' +
         '                    </div>' +
         '                </div>' +
         '                <div class="center">' +

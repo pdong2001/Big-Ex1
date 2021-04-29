@@ -220,6 +220,7 @@ body {
 
 .scroll-hidden {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .scroll-hidden::-webkit-scrollbar-thumb {
@@ -256,6 +257,7 @@ body {
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 1px;
+    color: black;
 }
 
 .user-id {
