@@ -50,11 +50,19 @@
 }
 
 .content-row .center {
+<<<<<<< HEAD
+=======
+    display: flex;
+>>>>>>> dced7777a22db345e6936c213a34640556042792
     flex-direction: column-reverse;
 }
 
 .content-row .center .interactive {
     display: flex;
+<<<<<<< HEAD
+=======
+    flex-direction: column;
+>>>>>>> dced7777a22db345e6936c213a34640556042792
     justify-content: center;
     align-items: center;
 }

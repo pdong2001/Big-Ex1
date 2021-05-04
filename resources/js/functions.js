@@ -83,7 +83,6 @@ document.querySelectorAll('.cmt-like input').forEach(
     }
 );
 
-
 document.querySelectorAll('.video video').forEach(elem => {
     elem.addEventListener('play', () => {
         document.querySelectorAll('.video video:not(#' + elem.id + ')').forEach(video => {

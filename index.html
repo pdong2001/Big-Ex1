@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD=======< head onclick="tabClick()">
+    >>>>>>> dced7777a22db345e6936c213a34640556042792
 
-<head>
-    <title>BisBis - Social Video Network</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>BisBis - Social Video Network</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="resources/css/style.css" rel="stylesheet">
-    <link href="resources/css/headbar.css" rel="stylesheet">
-    <link href="resources/css/menu_left.css" rel="stylesheet">
-    <link href="resources/css/content.css" rel="stylesheet" type="text/css">
+        <link href="resources/css/style.css" rel="stylesheet">
+        <link href="resources/css/headbar.css" rel="stylesheet">
+        <link href="resources/css/menu_left.css" rel="stylesheet">
+        <link href="resources/css/content.css" rel="stylesheet" type="text/css">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="icon" href="resources/img/Logo.png" style="background-color: none;">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="icon" href="resources/img/Logo.png" style="background-color: none;">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="vendors/css/fontawesome.min.css">
+        <script src="vendors/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="vendors/js/jquery-3.6.0.js"></script>
 
-    <link rel="stylesheet" href="vendors/css/fontawesome.min.css">
-    <script src="vendors/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="vendors/js/jquery-3.6.0.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    </head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div id="headbar" class="flex">
-            <div id="menu-btn">
-                <button type="button">
+    <body>
+        <header>
+            <div id="headbar" class="flex">
+                <div id="menu-btn">
+                    <button type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-            </div>
-            <div class="menu-bar" id="main-menu">
-                <div class="left">
-                    <div id="logo">
-                        <a href="index.html">
-                            <img src="resources/img/Logo.png">
-                            <h1 class="black">Bis<span style="border-radius: 10px;" class="padding-sm white bg-red-fresh">Bis</span></h1>
-                        </a>
+                </div>
+                <div class="menu-bar" id="main-menu">
+                    <div class="left">
+                        <div id="logo">
+                            <a href="index.html">
+                                <img src="resources/img/Logo.png">
+                                <h1 class="black">Bis<span style="border-radius: 10px;" class="padding-sm white bg-red-fresh">Bis</span></h1>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="searchbar">
+                        <form onsubmit="event.preventDefault();" role="search">
+                            <label for="search">Search for content</label>
+                            <input id="search" type="search" placeholder="Search..." autofocus required />
+                            <button type="submit">Go</button>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <ul class="menu">
+                            <li class="menu-item user">
+                                <a href="personal_page.html" class="user-link">
+                                    <img class="avt" src="resources/img/Avt_Itachi.PNG">
+                                    <span>Uchiha Itachi</span>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <i class="fas fa-home"></i>
+                            </li>
+                            <li class="menu-item">
+                                <i class="far fa-paper-plane"></i>
+                            </li>
+                            <li class="menu-item">
+                                <div id="notify">
+                                    <span>9+</span>
+                                    <i class="far fa-bell"></i>
+                                </div>
+                            </li>
+                            <li class="menu-item" style="border-radius: 100%;">
+                                <i class="fas fa-caret-down"></i>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div id="searchbar">
-                    <form onsubmit="event.preventDefault();" role="search">
-                        <label for="search">Search for content</label>
-                        <input id="search" type="search" placeholder="Search..." autofocus required />
-                        <button type="submit">Go</button>
-                    </form>
-                </div>
-                <div class="right">
-                    <ul class="menu">
-                        <li class="menu-item user">
-                            <a href="personal_page.html" class="user-link">
-                                <img class="avt" src="resources/img/Avt_Itachi.PNG">
-                                <span>Uchiha Itachi</span>
+            </div>
+        </header>
+        <div id="main" class="flex">
+            <div id="menu-left" class="">
+                <div class="bg-white container scroll-hidden">
+                    <ul>
+                        <li class="padding">
+                            <a href="#" class="bold red">
+                                <div class="menu-item">
+                                    <i class="fas fa-home"></i>
+                                    <span class="">Trang chủ</span>
+                                </div>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <i class="fas fa-home"></i>
+                        <li class="padding">
+                            <a href="#" class="bold space-cadet">
+                                <div class="menu-item">
+                                    <i class="fas fa-users"></i>
+                                    <span class="">Đang theo dõi</span>
+                                </div>
+                            </a>
                         </li>
-                        <li class="menu-item">
-                            <i class="far fa-paper-plane"></i>
-                        </li>
-                        <li class="menu-item">
-                            <div id="notify">
-                                <span>9+</span>
-                                <i class="far fa-bell"></i>
+                        <li class="padding">
+                            <div class="menu-item">
+                                <a href="#" class="bold space-cadet">
+                                    <i class="fas fa-fire-alt"></i>
+                                    <span>Thịnh hành</span>
+                                </a>
                             </div>
                         </li>
-                        <li class="menu-item" style="border-radius: 100%;">
-                            <i class="fas fa-caret-down"></i>
+                        <li class="padding">
+                            <div class="menu-item">
+                                <a href="#" class="bold space-cadet">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>Thư viện</span>
+                                </a>
+                            </div>
                         </li>
                     </ul>
+                    <hr style="margin: 10px 0px;">
+                    <div id="propose">
+                        <span class="ta-center black block mg-top mg-bottom mg-right">Đề xuất cho bạn</span>
+                        <script src="resources/js/addProposeRow.js"></script>
+                        <a id="showmore" href="#" class="red bold block mg-right mg-left" style="text-decoration: underline; text-align: right;">Xem thêm</a>
+                    </div>
+                    <hr style="margin: 10px 0px;">
+                </div>
+                <div class="cover-layer">
                 </div>
             </div>
-        </div>
-    </header>
-    <div id="main" class="flex">
-        <div id="menu-left" class="">
-            <div class="bg-white container scroll-hidden">
-                <ul>
-                    <li class="padding">
-                        <a href="#" class="bold red">
-                            <div class="menu-item">
-                                <i class="fas fa-home"></i>
-                                <span class="">Trang chủ</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="padding">
-                        <a href="#" class="bold space-cadet">
-                            <div class="menu-item">
-                                <i class="fas fa-users"></i>
-                                <span class="">Đang theo dõi</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="padding">
-                        <div class="menu-item">
-                            <a href="#" class="bold space-cadet">
-                                <i class="fas fa-fire-alt"></i>
-                                <span>Thịnh hành</span>
+            <div class="contents container  scroll-hidden">
+                <div class="row content-row" id='jtx-0'>
+                    <div class="left container">
+                        <div class="user-block">
+                            <a href="#">
+                                <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                <div class="user-info">
+                                    <span class="user-name">Uchiha Itachi</span>
+                                    <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                </div>
                             </a>
                         </div>
-                    </li>
-                    <li class="padding">
-                        <div class="menu-item">
-                            <a href="#" class="bold space-cadet">
-                                <i class="fas fa-book-open"></i>
-                                <span>Thư viện</span>
-                            </a>
+                        <div class="caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
                         </div>
-                    </li>
-                </ul>
-                <hr style="margin: 10px 0px;">
-                <div id="propose">
-                    <span class="ta-center black block mg-top mg-bottom mg-right">Đề xuất cho bạn</span>
-                    <script src="resources/js/addProposeRow.js"></script>
-                    <a id="showmore" href="#" class="red bold block mg-right mg-left" style="text-decoration: underline; text-align: right;">Xem thêm</a>
-                </div>
-                <hr style="margin: 10px 0px;">
-            </div>
-            <div class="cover-layer">
-            </div>
-        </div>
-        <div class="contents container  scroll-hidden">
-            <div class="row content-row" id='jtx-0'>
-                <div class="left container">
-                    <div class="user-block">
-                        <a href="#">
-                            <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                            <div class="user-info">
-                                <span class="user-name">Uchiha Itachi</span>
-                                <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                            </div>
-                        </a>
+                        <div class="video">
+                            <video id='jtx-0-video' playsinline controls loop name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
+                        </div>
                     </div>
-                    <div class="caption">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
-                    </div>
-                    <div class="video">
-                        <video id='jtx-0-video' playsinline controls loop name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
-                    </div>
-                </div>
-                <div class="center">
-                    <div class="interactive">
-                        <div class="interactive-btn like">
-                            <div>
-                                <form>
-                                    <span id="jtx-0-like-count"></span>
-                                    <input type="checkbox" id="jtx-0-like" class="like-checkbox" />
-                                    <label for="jtx-0-like">
+                    <div class="center">
+                        <div class="interactive">
+                            <div class="interactive-btn like">
+                                <div>
+                                    <form>
+                                        <span id="jtx-0-like-count"></span>
+                                        <input type="checkbox" id="jtx-0-like" class="like-checkbox" />
+                                        <label for="jtx-0-like">
                                     <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
                                     <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
                                     <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
@@ -193,234 +194,234 @@
                                     </g>
                                     </svg>
                                     </label>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class=" interactive-btn comment">
-                            <button id="jtx-0-cmt" class="">
+                            <div class=" interactive-btn comment">
+                                <button id="jtx-0-cmt" class="">
                             <i class="far fa-comment-dots"></i>
                                 </button>
-                        </div>
-                        <div class="interactive-btn share">
-                            <button class="">
+                            </div>
+                            <div class="interactive-btn share">
+                                <button class="">
                             <i class="far fa-share-square"></i>
                         </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="right container" id="jtx-0-cmt">
-                    <div class="container scroll-hidden relative" id="jtx-0-cmt">
-                        <div class="comment" id="jtx-0-cmt-1">
-                            <div class="user-block">
-                                <a href="personal_page.html">
-                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                                    <div class="user-info">
-                                        <span class="user-name">Uchiha Itachi</span>
-                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="comment-content">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                                </p>
-                                <div class="like-count" id="jtx-0-cmt-1-like-count">
-                                    <i class="cmt-heart far fa-heart"></i>
-                                    <span class="count">1</span>
+                    <div class="right container" id="jtx-0-cmt">
+                        <div class="container scroll-hidden relative" id="jtx-0-cmt">
+                            <div class="comment" id="jtx-0-cmt-1">
+                                <div class="user-block">
+                                    <a href="personal_page.html">
+                                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                        <div class="user-info">
+                                            <span class="user-name">Uchiha Itachi</span>
+                                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="interactive">
-                                <div>
-                                    <span class="opacity">36 phút trước</span>
-                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
-                                    <div class="cmt-like">
-                                        <input type="checkbox" id="jtx-0-cmt-1-like">
-                                        <label for="jtx-0-cmt-1-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
-                                    </div>
-                                    <div class="comment-more">
-                                        <a href="#"><i class="fas fa-ellipsis-h"></i></a>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="comment-reply-container" id="jtx-0-cmt-1-reply">
-                                <div>
-                                    <div class="comment" id="jtx-0-cmt-1-reply-0">
-                                        <div class="user-block">
-                                            <a href="personal_page.html">
-                                                <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                                                <div class="user-info">
-                                                    <span class="user-name">Uchiha Itachi</span>
-                                                    <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="comment-content">
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                                            </p>
-                                            <div class="like-count" id="jtx-0-cmt-1-reply-0-like-count">
-                                                <i class="cmt-heart far fa-heart"></i>
-                                                <span class="count">0</span>
-                                            </div>
-                                        </div>
-                                        <div class="interactive">
-                                            <div>
-                                                <span class="opacity">36 phút trước</span>
-                                                <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
-                                                <div class="cmt-like">
-                                                    <input type="checkbox" id="jtx-0-cmt-1-reply-0-like">
-                                                    <label for="jtx-0-cmt-1-reply-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
-                                                </div>
-                                                <div class="comment-more">
-                                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="comment-content">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                                    </p>
+                                    <div class="like-count" id="jtx-0-cmt-1-like-count">
+                                        <i class="cmt-heart far fa-heart"></i>
+                                        <span class="count">1</span>
                                     </div>
                                 </div>
-                                <div class="comment-input" id="jtx-0-cmt-1-input">
+                                <div class="interactive">
                                     <div>
-                                        <input type="text" placeholder="Bình luận">
-                                        <button><i class="far fa-paper-plane"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment" id="jtx-0-cmt-0">
-                            <div class="user-block">
-                                <a href="personal_page.html">
-                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                                    <div class="user-info">
-                                        <span class="user-name">Uchiha Itachi</span>
-                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="comment-content">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                                </p>
-                                <div class="like-count" id="jtx-0-cmt-0-like-count">
-                                    <i class="cmt-heart far fa-heart"></i>
-                                    <span class="count">0</span>
-                                </div>
-                            </div>
-                            <div class="interactive">
-                                <div>
-                                    <span class="opacity">36 phút trước</span>
-                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
-                                    <div class="cmt-like">
-                                        <input type="checkbox" id="jtx-0-cmt-0-like">
-                                        <label for="jtx-0-cmt-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
-                                    </div>
-                                    <div class="comment-more">
-                                        <a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
-                                </div>
-                            </div>
-                            <div class="comment-reply-container" id="jtx-0-cmt-0-reply">
-                                <div>
-                                    <div class="comment" id="jtx-0-cmt-0-reply-0">
-                                        <div class="user-block">
-                                            <a href="personal_page.html">
-                                                <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                                                <div class="user-info">
-                                                    <span class="user-name">Uchiha Itachi</span>
-                                                    <span class="user-id">@Uchiha_Itachi_2MGS</span>
-                                                </div>
-                                            </a>
+                                        <span class="opacity">36 phút trước</span>
+                                        <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                                        <div class="cmt-like">
+                                            <input type="checkbox" id="jtx-0-cmt-1-like">
+                                            <label for="jtx-0-cmt-1-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
                                         </div>
-                                        <div class="comment-content">
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                                            </p>
-                                            <div class="like-count" id="jtx-0-cmt-0-reply-0-like-count">
-                                                <i class="cmt-heart far fa-heart"></i>
-                                                <span class="count">0</span>
-                                            </div>
+                                        <div class="comment-more">
+                                            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
                                         </div>
-                                        <div class="interactive">
-                                            <div>
-                                                <span class="opacity">36 phút trước</span>
-                                                <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
-                                                <div class="cmt-like">
-                                                    <input type="checkbox" id="jtx-0-cmt-0-reply-0-like">
-                                                    <label for="jtx-0-cmt-0-reply-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
-                                                </div>
-                                                <div class="comment-more">
-                                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="comment-input" id="jtx-0-cmt-0-input">
-                                    <div>
-                                        <input type="text" placeholder="Bình luận">
-                                        <button><i class="far fa-paper-plane"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-input input-main" id='jtx-0-cmt-input'>
-                        <div>
-                            <input type="text" placeholder="Bình luận">
-                            <button><i class="far fa-paper-plane"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script src="resources/js/addContentRow.js"></script>
-        </div>
 
-        <div class="comment-input temp">
-            <div>
-                <input type="text" placeholder="Bình luận">
-                <button><i class="far fa-paper-plane"></i></button>
-            </div>
-        </div>
-        <div class="comment temp">
-            <div class="user-block">
-                <a href="personal_page.html">
-                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
-                    <div class="user-info">
-                        <span class="user-name">Uchiha Itachi</span>
-                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                    </div>
+                                </div>
+                                <div class="comment-reply-container" id="jtx-0-cmt-1-reply">
+                                    <div>
+                                        <div class="comment" id="jtx-0-cmt-1-reply-0">
+                                            <div class="user-block">
+                                                <a href="personal_page.html">
+                                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                                    <div class="user-info">
+                                                        <span class="user-name">Uchiha Itachi</span>
+                                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="comment-content">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                                                </p>
+                                                <div class="like-count" id="jtx-0-cmt-1-reply-0-like-count">
+                                                    <i class="cmt-heart far fa-heart"></i>
+                                                    <span class="count">0</span>
+                                                </div>
+                                            </div>
+                                            <div class="interactive">
+                                                <div>
+                                                    <span class="opacity">36 phút trước</span>
+                                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                                                    <div class="cmt-like">
+                                                        <input type="checkbox" id="jtx-0-cmt-1-reply-0-like">
+                                                        <label for="jtx-0-cmt-1-reply-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
+                                                    </div>
+                                                    <div class="comment-more">
+                                                        <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-input" id="jtx-0-cmt-1-input">
+                                        <div>
+                                            <input type="text" placeholder="Bình luận">
+                                            <button><i class="far fa-paper-plane"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment" id="jtx-0-cmt-0">
+                                <div class="user-block">
+                                    <a href="personal_page.html">
+                                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                        <div class="user-info">
+                                            <span class="user-name">Uchiha Itachi</span>
+                                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="comment-content">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                                    </p>
+                                    <div class="like-count" id="jtx-0-cmt-0-like-count">
+                                        <i class="cmt-heart far fa-heart"></i>
+                                        <span class="count">0</span>
+                                    </div>
+                                </div>
+                                <div class="interactive">
+                                    <div>
+                                        <span class="opacity">36 phút trước</span>
+                                        <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                                        <div class="cmt-like">
+                                            <input type="checkbox" id="jtx-0-cmt-0-like">
+                                            <label for="jtx-0-cmt-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
+                                        </div>
+                                        <div class="comment-more">
+                                            <a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
+                                    </div>
+                                </div>
+                                <div class="comment-reply-container" id="jtx-0-cmt-0-reply">
+                                    <div>
+                                        <div class="comment" id="jtx-0-cmt-0-reply-0">
+                                            <div class="user-block">
+                                                <a href="personal_page.html">
+                                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                                    <div class="user-info">
+                                                        <span class="user-name">Uchiha Itachi</span>
+                                                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="comment-content">
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                                                </p>
+                                                <div class="like-count" id="jtx-0-cmt-0-reply-0-like-count">
+                                                    <i class="cmt-heart far fa-heart"></i>
+                                                    <span class="count">0</span>
+                                                </div>
+                                            </div>
+                                            <div class="interactive">
+                                                <div>
+                                                    <span class="opacity">36 phút trước</span>
+                                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                                                    <div class="cmt-like">
+                                                        <input type="checkbox" id="jtx-0-cmt-0-reply-0-like">
+                                                        <label for="jtx-0-cmt-0-reply-0-like"><i class="cmt-heart far fa-heart"></i>Thích</label>
+                                                    </div>
+                                                    <div class="comment-more">
+                                                        <a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-input" id="jtx-0-cmt-0-input">
+                                        <div>
+                                            <input type="text" placeholder="Bình luận">
+                                            <button><i class="far fa-paper-plane"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-input input-main" id='jtx-0-cmt-input'>
+                            <div>
+                                <input type="text" placeholder="Bình luận">
+                                <button><i class="far fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="comment-content">
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
-                </p>
-                <div class="like-count">
-                    <i class="cmt-heart far fa-heart"></i>
-                    <span class="count">0</span>
                 </div>
+                <script src="resources/js/addContentRow.js"></script>
             </div>
-            <div class="interactive">
+
+            <div class="comment-input temp">
                 <div>
-                    <span class="opacity">36 phút trước</span>
-                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
-                    <div class="cmt-like">
-                        <input type="checkbox">
-                        <label><i class="cmt-heart far fa-heart"></i>Thích</label>
-                    </div>
-                    <div class="comment-more"><a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
-
+                    <input type="text" placeholder="Bình luận">
+                    <button><i class="far fa-paper-plane"></i></button>
                 </div>
             </div>
+            <div class="comment temp">
+                <div class="user-block">
+                    <a href="personal_page.html">
+                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                        <div class="user-info">
+                            <span class="user-name">Uchiha Itachi</span>
+                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="comment-content">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                    </p>
+                    <div class="like-count">
+                        <i class="cmt-heart far fa-heart"></i>
+                        <span class="count">0</span>
+                    </div>
+                </div>
+                <div class="interactive">
+                    <div>
+                        <span class="opacity">36 phút trước</span>
+                        <a href="#"><i class="fas fa-reply"></i>Trả lời</a>
+                        <div class="cmt-like">
+                            <input type="checkbox">
+                            <label><i class="cmt-heart far fa-heart"></i>Thích</label>
+                        </div>
+                        <div class="comment-more"><a href="#"><i class="fas fa-ellipsis-h"></i></a></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="comment-menu temp">
+                <div class="cover-layer"></div>
+                <ul>
+                    <li>
+                        <a class="del" href="#"><i class="fas fa-trash-alt"></i>Xóa bình luận</a>
+                    </li>
+                </ul>
+            </div>
+            <script src="resources/js/functions.js"></script>
         </div>
-        <div class="comment-menu temp">
-            <div class="cover-layer"></div>
-            <ul>
-                <li>
-                    <a class="del" href="#"><i class="fas fa-trash-alt"></i>Xóa bình luận</a>
-                </li>
-            </ul>
-        </div>
-        <script src="resources/js/functions.js"></script>
-    </div>
-</body>
+    </body>
 
 </html>

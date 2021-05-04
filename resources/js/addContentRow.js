@@ -30,22 +30,15 @@ function addRowContent(path) {
             '                                    <span class="opacity">36 phút trước</span>' +
             '                                    <a href="#"><i class="fas fa-reply"></i>Trả lời</a>' +
             '                                    <div class="cmt-like">' +
-            '                                        <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '-like">' +
-            '                                        <label for="jtx-' + idNumber + '-cmt-' + i + '-like"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
+            '                                        <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '">' +
+            '                                        <label for="jtx-' + idNumber + '-cmt-' + i + '"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
             '                                    </div>' +
-            '                                    <div class="comment-more"><a href="#"><i class="fas fa-ellipsis-h"></i></a></div>' +
+            '                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>' +
             '                                </div>' +
             '                            </div>' +
-            '                               <div class="comment-reply-container" id="jtx-' + idNumber + '-cmt-' + i + '-reply">' +
-            '                               <div class="comment-input" id="jtx-' + idNumber + '-cmt-' + i + '-input">' +
-            '                                    <div>' +
-            '                                        <input type="text" placeholder="Bình luận">' +
-            '                                        <button><i class="far fa-paper-plane"></i></button>' +
-            '                                    </div>' +
-            '                                </div>' +
-            '                                </div>' +
             '                        </div>';
     }
+
     var myvar = '<div class="row content-row" id=\'jtx-' + idNumber + '\'>' +
         '                <div class="left container">' +
         '                    <div class="user-block">' +
@@ -57,11 +50,11 @@ function addRowContent(path) {
         '                            </div>' +
         '                        </a>' +
         '                    </div>' +
-        '                    <div class="caption scroll-hidden">' +
+        '                    <div class="caption">' +
         '                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.' +
         '                    </div>' +
         '                    <div class="video">' +
-        '                        <video id="jtx-' + idNumber + '-video" playsinline loop controls name="media"><source src="' + path + '" type="video/mp4"></video>' +
+        '                        <video id="jtx-' + idNumber + '-video" playsinline controls name="media"><source src="' + path + '" type="video/mp4"></video>' +
         '                    </div>' +
         '                </div>' +
         '                <div class="center">' +
@@ -111,7 +104,7 @@ function addRowContent(path) {
         '                            </div>' +
         '                        </div>' +
         '                        <div class=" interactive-btn comment">' +
-        '                            <button id="jtx-' + idNumber + '-cmt" class="">' +
+        '                            <button for="jtx-' + idNumber + '-cmt-show" class="">' +
         '                            <i class="far fa-comment-dots"></i>' +
         '                                </button>' +
         '                        </div>' +
