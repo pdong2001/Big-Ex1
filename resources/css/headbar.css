@@ -1,19 +1,83 @@
-#headbar {
-    padding: 15px;
-    height: 75px;
+#main-menu {
     position: relative;
+    height: 50px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: white;
+    width: 100%;
+    padding: 0px 15px;
+}
+
+#main-menu .left div {
+    margin: 0px 15px;
+}
+
+.menu-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.menu-bar .menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu-bar .menu-item {
+    margin: 5px 0px;
+    height: 40px;
+    min-width: 40px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar .menu-item:hover {
+    background: rgb(220, 220, 220);
+}
+
+.menu-bar .left,
+.menu-bar .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar .right .button {
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-bar .upload {
+    background: #EF233C;
+    color: white;
+}
+
+.menu-bar .edit,
+.menu-bar .more {
+    background: rgb(220, 220, 220);
+    color: black;
 }
 
 #menu-btn {
     height: 46px;
     width: 46px;
-    margin-right: 10px;
+    min-width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu-btn button {
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 100%;
     border: none;
     background: none;
@@ -29,20 +93,18 @@
     width: fit-content;
 }
 
+#logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo a img {
     height: 36px;
-    float: left;
 }
 
 #logo a h1 {
-    float: left;
     font-size: 23px;
-}
-
-#searchbar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
@@ -108,55 +170,10 @@
     overflow: hidden;
 }
 
-#right-btns {
-    position: absolute;
-    right: 10px;
-    top: 30px;
-}
-
-
-/* Login */
-
-#login {
-    width: 100%;
-    margin: 0px 10px;
-}
-
-.button a {
-    padding: 10px;
-    text-decoration: none;
-}
-
-
-/* upload */
-
-#upload {
-    margin: 0px 10px;
-}
-
-.btns button {
-    outline: none;
-    background: none;
-    border: none;
-}
-
-.btns button svg {
-    font-size: 26px;
-    color: #2B2D42;
-}
-
-
-/* Messages */
-
-#messages {
-    margin: 0px 10px;
-}
-
 
 /* Notify */
 
 #notify {
-    margin: 0px 10px;
     position: relative;
 }
 
@@ -174,6 +191,26 @@
     color: white;
 }
 
-#notify svg {
-    font-size: 26px;
+.menu-item.user {
+    border-radius: 40px;
+    padding: 7px;
+}
+
+.user-link {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-link .avt {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.user-link .name {
+    letter-spacing: 1px;
 }

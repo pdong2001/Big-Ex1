@@ -1,24 +1,24 @@
 #menu-left {
     z-index: 1;
-    background-color: #ffffff;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 50px);
     width: fit-content;
+    position: relative;
 }
 
 #main {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 50px);
 }
 
 a {
     text-decoration: none;
 }
 
-.menu-item {
+#menu-left .center {
     display: flex;
     margin: 5px;
 }
 
-.menu-item span {
+#menu-left .center span {
     position: relative;
     left: 26px;
 }
@@ -33,12 +33,18 @@ a {
 @media only screen and (max-width: 768px) {
     #menu-left {
         width: 100%;
+        display: flex;
         position: absolute;
-        flex-direction: column;
     }
-    .cover-layer {
-        width: 50%;
-        background: rgba(60, 60, 60, 0.6);
+    #menu-left .scroll-hidden {
+        width: 15rem;
+    }
+    #menu-left .cover-layer {
+        width: calc(100% - 15rem);
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0);
+        opacity: 0.3;
     }
 }
 

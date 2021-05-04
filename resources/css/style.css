@@ -4,6 +4,8 @@
     padding: 0px;
     box-sizing: border-box;
     outline: none;
+    text-decoration: none;
+    position: relative;
 }
 
 html {
@@ -108,6 +110,7 @@ body {
 }
 
 .container {
+    position: relative;
     height: 100%;
     width: 100%;
 }

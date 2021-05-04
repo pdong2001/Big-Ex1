@@ -1,7 +1,10 @@
 function addRowContent(path) {
-    var idNumber = $('.content-row').length;
+    var idNumber = 0;
+    if ($('.content-row') != null) {
+        idNumber = $('.content-row').length;
+    }
     var comment = '';
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 5; i++) {
         comment +=
             '                        <div class="comment" id=jtx-' + idNumber + '-cmt-' + i + '>' +
             '                            <div class="user-block">' +
@@ -30,10 +33,10 @@ function addRowContent(path) {
             '                                        <input type="checkbox" id="jtx-' + idNumber + '-cmt-' + i + '-like">' +
             '                                        <label for="jtx-' + idNumber + '-cmt-' + i + '-like"><i class="cmt-heart far fa-heart"></i>Thích</label>' +
             '                                    </div>' +
-            '                                    <a href="#"><i class="fas fa-ellipsis-h"></i></a>' +
+            '                                    <div class="comment-more"><a href="#"><i class="fas fa-ellipsis-h"></i></a></div>' +
             '                                </div>' +
             '                            </div>' +
-            '                               <div class="comment-reply-container">' +
+            '                               <div class="comment-reply-container" id="jtx-' + idNumber + '-cmt-' + i + '-reply">' +
             '                               <div class="comment-input" id="jtx-' + idNumber + '-cmt-' + i + '-input">' +
             '                                    <div>' +
             '                                        <input type="text" placeholder="Bình luận">' +
@@ -43,7 +46,6 @@ function addRowContent(path) {
             '                                </div>' +
             '                        </div>';
     }
-
     var myvar = '<div class="row content-row" id=\'jtx-' + idNumber + '\'>' +
         '                <div class="left container">' +
         '                    <div class="user-block">' +
@@ -55,7 +57,7 @@ function addRowContent(path) {
         '                            </div>' +
         '                        </a>' +
         '                    </div>' +
-        '                    <div class="caption">' +
+        '                    <div class="caption scroll-hidden">' +
         '                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.' +
         '                    </div>' +
         '                    <div class="video">' +
@@ -109,7 +111,7 @@ function addRowContent(path) {
         '                            </div>' +
         '                        </div>' +
         '                        <div class=" interactive-btn comment">' +
-        '                            <button for="jtx-' + idNumber + '-cmt-show" class="">' +
+        '                            <button id="jtx-' + idNumber + '-cmt" class="">' +
         '                            <i class="far fa-comment-dots"></i>' +
         '                                </button>' +
         '                        </div>' +
@@ -120,10 +122,10 @@ function addRowContent(path) {
         '                        </div>' +
         '                    </div>' +
         '                </div>' +
-        '                <div class="right container">' +
+        '                <div class="right container" id=\'jtx-' + idNumber + '-cmt\'>' +
         '                    <div class="container scroll-hidden relative">' + comment +
         '                    </div>' +
-        '                    <div class="comment-input bottom">' +
+        '                    <div class="comment-input input-main" id=\'jtx-' + idNumber + '-cmt>' +
         '                        <div>' +
         '                            <input type="text" placeholder="Bình luận">' +
         '                            <button><i class="far fa-paper-plane"></i></button>' +
@@ -134,6 +136,5 @@ function addRowContent(path) {
     document.write(myvar);
 }
 
-for (var i = 1; i <= 10; i++) {
-    addRowContent('resources/data/video/Video-' + i + '.mp4');
-}
+addRowContent('resources/data/video/Video-' + 1 + '.mp4');
+addRowContent('resources/data/video/Video-' + 2 + '.mp4');

@@ -43,7 +43,7 @@
     display: block;
     border-radius: 10px;
     max-width: 100%;
-    max-height: 100%;
+    height: 100%;
     position: relative;
     background-color: black;
     border: 1px solid;
@@ -116,8 +116,9 @@
     display: inline-block;
 }
 
-.comment .interactive div {
+.comment .interactive div:first-child {
     user-select: none;
+    display: flex;
 }
 
 .cmt-like input {
@@ -451,4 +452,39 @@
         border-left: 1px solid;
         border-right: 1px solid;
     }
+}
+
+.temp {
+    display: none;
+}
+
+.comment-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid;
+    width: max-content;
+    right: 0;
+    z-index: 1;
+    display: none;
+    border-radius: 5px;
+}
+
+.comment-menu ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.comment-menu ul li a {
+    color: black;
+}
+
+.comment-menu .cover-layer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 83vw;
+    z-index: -1;
 }
