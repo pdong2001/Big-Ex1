@@ -67,21 +67,85 @@ function onResize() {
     }
 };
 
-document.querySelectorAll('.cmt-like input').forEach(
-    elem => {
-        elem.addEventListener('change', () => {
-            var likeCount = document.querySelector('#' + elem.id + '-count span');
-            if (likeCount.innerHTML == '') {
-                likeCount.innerHTML = 0;
-            }
-            if (elem.checked) {
-                likeCount.innerHTML = Number(likeCount.innerHTML) + 1;
-            } else {
-                likeCount.innerHTML = Number(likeCount.innerHTML) - 1;
-            }
-        });
-    }
-);
+function commentEvents() {
+    $('.cmt-like input').unbind('change');
+    $('.cmt-like input').change(function() {
+        var likeCount = document.querySelector('#' + $(this).attr('id') + '-count span');
+        console.log('#' + $(this).attr('id') + '-count span');
+        if (likeCount.innerHTML == '') {
+            likeCount.innerHTML = 0;
+        }
+        if ($(this).prop('checked')) {
+            likeCount.innerHTML = Number(likeCount.innerHTML) + 1;
+        } else {
+            likeCount.innerHTML = Number(likeCount.innerHTML) - 1;
+        }
+    });
+
+    $('.comment .reply').unbind('click');
+    $('.comment .reply').click(function() {
+        var id = getParent($(this), 3).attr('id');
+        var match = id.match(/-reply-\d+/i);
+        $('.right .comment .comment-input').hide();
+        $('#' + id.replace(match, '') + '-input').toggle();
+        $('#' + id.replace(match, '') + '-input input').focus();
+    });
+
+    $('.comment-input').unbind('focusout');
+    $('.comment-input').focusout(function() {
+        $(this).hide();
+    });
+    $('.comment-input input').unbind('keypress');
+    $('.comment-input input').on('keypress', function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            $(this).parent().find('button').click();
+            $(this).focusout();
+        }
+    });
+
+
+    document.querySelectorAll('.comment .comment-more').forEach(elem => {
+        if (elem.children.length < 2)
+            getCommnetMenuTemplate().appendTo(elem);
+    })
+
+
+    $('.comment-more .more').unbind('click');
+    $('.comment-more .more').click(function() {
+        $(this).siblings().show();
+    });
+
+    $('.comment-menu .del').unbind('click');
+    $('.comment-menu .del').click(function() {
+        getParent($(this), 7).remove();
+    });
+
+    $('.comment-menu .cover-layer').unbind('click');
+    $('.comment-menu .cover-layer').click(function() {
+        $(this).parent().hide();
+    });
+
+    $('.center .interactive .comment button').unbind('click');
+    $('.center .interactive .comment button').click(function() {
+        $('#' + $(this).attr('id') + '-input').show();
+        $('#' + $(this).attr('id') + '-input input').focus();
+    });
+
+    $('#main .contents .content-row .right .comment-input button').unbind('click');
+    $('#main .contents .content-row .right .comment-input button').click(function() {
+        var container = getParent($(this), 3);
+        var id = container.attr('id');
+        var addInput = true;
+        var val = $(this).parent().find('input').val();
+        if (!$(this).parent().parent().hasClass('input-main')) {
+            addInput = false;
+        }
+        addComment(getParent($(this), 2).prev(), id, 1, addInput, val);
+        commentEvents();
+    });
+}
+
 
 document.querySelectorAll('.video video').forEach(elem => {
     elem.addEventListener('play', () => {
@@ -89,82 +153,6 @@ document.querySelectorAll('.video video').forEach(elem => {
             video.pause();
         });
     });
-});
-
-document.querySelectorAll('.right .comment').forEach(elem => {
-    elem.querySelector('.interactive div a').addEventListener('click', () => {
-        var match = elem.id.match(/-reply-\d+/i);
-        $('.right .comment .comment-input').hide();
-        $('#' + elem.id.replace(match, '') + '-input').toggle();
-        $('#' + elem.id.replace(match, '') + '-input input').focus();
-    });
-});
-
-$('.comment-input').focusout(function() {
-    $(this).hide();
-});
-
-
-document.querySelectorAll('#main .contents .content-row .right .comment-input button').forEach(elem => {
-    elem.addEventListener('click', () => {
-        var prev = elem.previousElementSibling;
-        var id = elem.parentElement.parentElement.parentElement.parentElement.id;
-        if (prev.value != '') {
-            var len = elem.parentElement.parentElement.previousElementSibling.children.length;
-            var commentBlock = $('.comment.temp').clone();
-            var commentMenu = getCommnetMenuTemplate();
-            if (!elem.parentElement.classList.contains('input-main')) {
-                id += '-reply';
-            }
-
-            commentMenu.appendTo(commentBlock);
-            commentBlock.attr('id', id + '-' + len);
-            commentBlock.find('.comment-content p').text(prev.value);
-            commentBlock.find('.comment-content').attr('id', id + '-' + len);
-            commentBlock.find('.like-count').attr('id', id + '-' + len + '-' + 'like-count');
-            commentBlock.find('.cmt-like input').attr('id', id + '-' + len + '-' + 'like');
-            commentBlock.find('.comment-content .like-count span').text('0');
-            commentBlock.find('.cmt-like input').change(() => {
-                var likeCount = document.querySelector('#' + id + '-' + len + '-' + 'like-count span');
-                if (likeCount.innerHTML == '') {
-                    likeCount.innerHTML = 0;
-                }
-                if ($('#' + id + '-' + len + '-' + 'like' + ':checked').length > 0) {
-                    likeCount.innerHTML = Number(likeCount.innerHTML) + 1;
-                } else {
-                    likeCount.innerHTML = Number(likeCount.innerHTML) - 1;
-                }
-            });
-            commentBlock.find('.cmt-like label').attr('for', id + '-' + len + '-' + 'like');
-            commentBlock.removeClass('temp');
-            commentBlock.find('.comment-more a:first-child').click(function() {
-                $(this).siblings().show();
-            });
-            commentBlock.find('.cover-layer').click(function() {
-                commentBlock.find('.comment-menu').hide();
-            });
-            commentBlock.find('.del').click(function() {
-                $('#' + commentBlock.attr('id')).remove();
-            });
-            if (elem.parentElement.classList.contains('input-main')) {
-                commentBlock.append('<div class="comment-reply-container" id="' + id + '-reply"><div></div></div>');
-                getTemplate('.comment-input').appendTo(commentBlock.find('.comment-reply-container'));
-                commentBlock.find('.comment-input').attr('id', id + '-input');
-            }
-            commentBlock.appendTo(elem.parentElement.parentElement.previousElementSibling);
-            elem.previousElementSibling.value = '';
-        }
-    });
-});
-
-
-document.querySelectorAll('#main .contents .content-row .right .comment-input div').forEach(elem => {
-    elem.children[0].addEventListener('keypress', function(event) {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if (keycode == '13') {
-            elem.children[1].click();
-        }
-    })
 });
 
 $(document).ready(() => {
@@ -191,13 +179,13 @@ $(document).ready(() => {
 });
 
 function getTemplate(name) {
-    var commnetOption = $(name + '.temp').clone();
+    var commnetOption = $(name + '.temp').clone(true);
     commnetOption.removeClass('temp');
     return commnetOption;
 }
 
 function getCommnetMenuTemplate() {
-    var commnetOption = $('.comment-menu.temp').clone();
+    var commnetOption = $('.comment-menu.temp').clone(true);
     commnetOption.removeClass('temp');
     return commnetOption;
 }
@@ -210,29 +198,73 @@ function getParentElement(el, index) {
     return parent;
 }
 
-document.querySelectorAll('.comment .comment-more').forEach(elem => {
-    getCommnetMenuTemplate().appendTo(elem);
-})
+function getParent(el, index) {
+    var parent = el;
+    for (var i = 0; i < index; i++) {
+        parent = parent.parent();
+    }
+    return parent;
+}
 
-document.querySelectorAll('.comment .comment-more .comment-menu .del').forEach(elem => {
-    elem.addEventListener('click', () => {
-        $('#' + getParentElement(elem, 7).id).remove();
-    });
-})
+
+function createNewContentRow(i) {
+    var newContent = $('.row.content-row.temp').clone(true);
+    var len = $('.row.content-row').length;
+
+    newContent.attr('id', 'jtx-' + len);
+    newContent.find('.video video').attr('id', 'jtx-' + len + '-video');
+
+    var likeBtn = newContent.find('.center .interactive .like form');
+    likeBtn.find('span:first-child').attr('id', 'jtx-' + len + '-like-count');
+    likeBtn.find('input:checkbox').attr('id', 'jtx-' + len + '-like');
+    likeBtn.find('label').attr('for', 'jtx-' + len + '-like');
+
+    newContent.find('.center .comment button').attr('id', 'jtx-' + len + '-cmt');
+    newContent.find('.video video').attr('id', 'jtx-' + len + '-video');
+    newContent.find('.video video source').attr('src', 'resources/data/video/Video-' + i + '.mp4');
+    newContent.find('.right').attr('id', 'jtx-' + len + '-cmt')
+    newContent.find('.comment-input').attr('id', 'jtx-' + len + '-cmt-input');
+    newContent.removeClass('temp');
+    return newContent;
+}
+
+function addComment(Container, id, count, addInput = true, value = '') {
+    for (var i = 0; i < count; i++) {
+        var len = Container.children().length;
+        var commentBlock = $('.comment.temp').clone(true);
+        if (value != '') {
+            commentBlock.find('.comment-content p').text(value);
+        }
+        commentBlock.attr('id', id + '-' + len);
+        commentBlock.find('.comment-content').attr('id', id + '-' + len + '-content');
+        commentBlock.find('.like-count').attr('id', id + '-' + len + '-' + 'like-count');
+        commentBlock.find('.cmt-like input').attr('id', id + '-' + len + '-' + 'like');
+        commentBlock.find('.comment-content .like-count span').text('0');
+        commentBlock.find('.cmt-like label').attr('for', id + '-' + len + '-' + 'like');
+        commentBlock.removeClass('temp');
+        if (addInput) {
+            commentBlock.append('<div class="comment-reply-container" id="' + id + '-' + len + '-reply"><div></div></div>');
+            getTemplate('.comment-input').appendTo(commentBlock.find('.comment-reply-container'));
+            commentBlock.find('.comment-input').attr('id', id + '-' + len + '-input');
+        }
+        commentBlock.appendTo(Container);
+    }
+}
+
+function addContentRow(i) {
+    var newRow = createNewContentRow(i);
+    addComment(newRow.find('.right .container'), newRow.attr('id') + '-cmt', 5);
+    newRow.appendTo($('.contents.container'));
+}
+
+for (var i = 10; i > 0; i--) {
+    addContentRow(i);
+}
+
+commentEvents();
+
 $(document).ready(function() {
-    $('.comment-more a:first-child').click(function() {
-        $(this).siblings().show();
+    $('.scrollTop button').click(function() {
+        $('.contents.container').animate({ scrollTop: 0 });
     });
 });
-
-$(document).ready(() => {
-    $('.comment-menu .cover-layer').click(function() {
-        $(this).parent().hide();
-    });
-});
-
-$('.center .interactive .comment button').click(function() {
-    console.log('clicked');
-    $('#' + $(this).attr('id') + '-input').show();
-    $('#' + $(this).attr('id') + '-input input').focus();
-})
