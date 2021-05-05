@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     outline: none;
+    text-decoration: none;
+    position: relative;
 }
 
 html {
-    font-family: "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -107,6 +110,7 @@ body {
 }
 
 .container {
+    position: relative;
     height: 100%;
     width: 100%;
 }
@@ -124,6 +128,15 @@ body {
 
 .flex {
     display: flex;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.relative {
+    position: relative;
 }
 
 .inline-block {
@@ -210,6 +223,7 @@ body {
 
 .scroll-hidden {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .scroll-hidden::-webkit-scrollbar-thumb {
@@ -244,6 +258,9 @@ body {
 
 .user-name {
     font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
 }
 
 .user-id {

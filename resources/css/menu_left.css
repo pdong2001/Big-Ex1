@@ -1,32 +1,56 @@
-:root {
-    --space-cadet: #2B2D42;
-}
-
 #menu-left {
-    width: 20rem;
+    z-index: 1;
+    height: calc(100vh - 50px);
+    width: fit-content;
     position: relative;
 }
 
 #main {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 50px);
 }
 
 a {
     text-decoration: none;
 }
 
-.menu-item {
+#menu-left .center {
     display: flex;
     margin: 5px;
 }
 
-.menu-item span {
-    position: absolute;
-    left: 60px;
+#menu-left .center span {
+    position: relative;
+    left: 26px;
 }
 
 #propose .user-block {
     box-shadow: 2px 2px 2px whitesmoke;
     display: none;
     margin: 15px 10px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #menu-left {
+        width: 100%;
+        display: flex;
+        position: absolute;
+    }
+    #menu-left .scroll-hidden {
+        width: 15rem;
+    }
+    #menu-left .cover-layer {
+        width: calc(100% - 15rem);
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0);
+        opacity: 0.3;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #menu-left {
+        width: 20%;
+        position: relative;
+    }
 }
