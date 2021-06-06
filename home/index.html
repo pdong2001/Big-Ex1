@@ -6,24 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="resources/css/style.css" rel="stylesheet">
-    <link href="resources/css/headbar.css" rel="stylesheet">
-    <link href="resources/css/menu_left.css" rel="stylesheet">
-    <link href="resources/css/content.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/style.css" rel="stylesheet">
+    <link href="../resources/css/headbar.css" rel="stylesheet">
+    <link href="../resources/css/menu_left.css" rel="stylesheet">
+    <link href="../resources/css/content.css" rel="stylesheet" type="text/css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="icon" href="resources/img/Logo.png" style="background-color: none;">
+    <link rel="icon" href="../resources/img/Logo.png" style="background-color: none;">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <link rel="stylesheet" href="vendors/css/fontawesome.min.css">
-    <script src="vendors/js/all.min.js" crossorigin="anonymous"></script>
-    <script src="vendors/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../vendors/css/fontawesome.min.css">
+    <script src="../vendors/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onresize="onResize()">
     <header>
         <div id="headbar" class="flex">
             <div id="menu-btn">
@@ -35,7 +35,7 @@
                 <div class="left">
                     <div id="logo">
                         <a href="index.html">
-                            <img src="resources/img/Logo.png">
+                            <img src="../resources/img/Logo.png">
                             <h1 class="black">Bis<span style="border-radius: 10px;" class="padding-sm white bg-red-fresh">Bis</span></h1>
                         </a>
                     </div>
@@ -48,29 +48,33 @@
                     </form>
                 </div>
                 <div class="right">
-                    <ul class="menu">
-                        <li class="menu-item user">
-                            <a href="personal_page.html" class="user-link">
-                                <img class="avt" src="resources/img/Avt_Itachi.PNG">
-                                <span>Uchiha Itachi</span>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <i class="fas fa-home"></i>
-                        </li>
-                        <li class="menu-item">
-                            <i class="far fa-paper-plane"></i>
-                        </li>
-                        <li class="menu-item">
-                            <div id="notify">
-                                <span>9+</span>
-                                <i class="far fa-bell"></i>
-                            </div>
-                        </li>
-                        <li class="menu-item" style="border-radius: 100%;">
-                            <i class="fas fa-caret-down"></i>
-                        </li>
-                    </ul>
+                    <div class="menu-item user">
+                        <a href="../personal-page/personal_page.html" class="user-link">
+                            <img class="avt" src="../resources/img/Avt_Itachi.PNG">
+                            <span class="name">Uchiha Itachi</span>
+                        </a>
+                    </div>
+                    <div id="menu-ctn">
+                        <ul id="head-menu" class="menu">
+                            <li class="menu-item">
+                                <i class="fas fa-home"></i>
+                            </li>
+                            <li class="menu-item">
+                                <i class="far fa-paper-plane"></i>
+                            </li>
+                            <li class="menu-item">
+                                <div id="notify">
+                                    <span>9+</span>
+                                    <i class="far fa-bell"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="menu-more" class="circle dropdown-menu menu-item">
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,43 +83,44 @@
         <div id="menu-left" class="">
             <div class="bg-white container scroll-hidden">
                 <ul>
-                    <li class="padding">
+                    <li>
                         <a href="#" class="bold red">
                             <div class="menu-item">
-                                <i class="fas fa-home"></i>
-                                <span class="">Trang chủ</span>
+                                <span class="icon"><i class="fas fa-home"></i></span>
+                                <span>Trang chủ</span>
                             </div>
                         </a>
                     </li>
-                    <li class="padding">
+                    <li>
                         <a href="#" class="bold space-cadet">
                             <div class="menu-item">
-                                <i class="fas fa-users"></i>
+                                <span class="icon"><i class="fas fa-users"></i></span>
+
                                 <span class="">Đang theo dõi</span>
                             </div>
                         </a>
                     </li>
-                    <li class="padding">
-                        <div class="menu-item">
-                            <a href="#" class="bold space-cadet">
-                                <i class="fas fa-fire-alt"></i>
+                    <li>
+                        <a href="#" class="bold space-cadet">
+                            <div class="menu-item">
+                                <span class="icon"><i class="fas fa-fire-alt"></i></span>
                                 <span>Thịnh hành</span>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </li>
-                    <li class="padding">
-                        <div class="menu-item">
-                            <a href="#" class="bold space-cadet">
-                                <i class="fas fa-book-open"></i>
+                    <li>
+                        <a href="#" class="bold space-cadet">
+                            <div class="menu-item">
+                                <span class="icon"><i class="fas fa-book-open"></i></span>
                                 <span>Thư viện</span>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
                 <hr style="margin: 10px 0px;">
                 <div id="propose">
                     <span class="ta-center black block mg-top mg-bottom mg-right">Đề xuất cho bạn</span>
-                    <script src="resources/js/addProposeRow.js"></script>
+                    <script src="../resources/js/addProposeRow.js"></script>
                     <a id="showmore" href="#" class="red bold block mg-right mg-left" style="text-decoration: underline; text-align: right;">Xem thêm</a>
                 </div>
                 <hr style="margin: 10px 0px;">
@@ -128,18 +133,18 @@
                 <div class="left container">
                     <div class="user-block">
                         <a href="#">
-                            <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                            <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                             <div class="user-info">
                                 <span class="user-name">Uchiha Itachi</span>
                                 <span class="user-id">@Uchiha_Itachi_2MGS</span>
                             </div>
                         </a>
                     </div>
-                    <div class="caption">
+                    <div class="caption scroll-hidden">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
                     </div>
                     <div class="video">
-                        <video id='jtx-0-video' playsinline controls loop name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
+                        <video id='jtx-0-video' playsinline controls loop name="media"><source src="../resources/data/video/Video-1.mp4" type="video/mp4"></video>
                     </div>
                 </div>
                 <div class="center">
@@ -207,12 +212,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="right container" id="jtx-0-cmt">
+                <div class="comment-container container" id="jtx-0-cmt">
                     <div class="container scroll-hidden relative">
                         <div class="comment" id="jtx-0-cmt-1">
                             <div class="user-block">
-                                <a href="personal_page.html">
-                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                <a href="../personal-page/personal_page.html">
+                                    <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                                     <div class="user-info">
                                         <span class="user-name">Uchiha Itachi</span>
                                         <span class="user-id">@Uchiha_Itachi_2MGS</span>
@@ -246,8 +251,8 @@
                                 <div>
                                     <div class="comment" id="jtx-0-cmt-1-reply-0">
                                         <div class="user-block">
-                                            <a href="personal_page.html">
-                                                <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                            <a href="../personal-page/personal_page.html">
+                                                <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                                                 <div class="user-info">
                                                     <span class="user-name">Uchiha Itachi</span>
                                                     <span class="user-id">@Uchiha_Itachi_2MGS</span>
@@ -288,8 +293,8 @@
                         </div>
                         <div class="comment" id="jtx-0-cmt-0">
                             <div class="user-block">
-                                <a href="personal_page.html">
-                                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                <a href="../personal-page/personal_page.html">
+                                    <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                                     <div class="user-info">
                                         <span class="user-name">Uchiha Itachi</span>
                                         <span class="user-id">@Uchiha_Itachi_2MGS</span>
@@ -321,8 +326,8 @@
                                 <div>
                                     <div class="comment" id="jtx-0-cmt-0-reply-0">
                                         <div class="user-block">
-                                            <a href="personal_page.html">
-                                                <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                                            <a href="../personal-page/personal_page.html">
+                                                <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                                                 <div class="user-info">
                                                     <span class="user-name">Uchiha Itachi</span>
                                                     <span class="user-id">@Uchiha_Itachi_2MGS</span>
@@ -383,8 +388,8 @@
         </div>
         <div class="comment temp">
             <div class="user-block">
-                <a href="personal_page.html">
-                    <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                <a href="../personal-page/personal_page.html">
+                    <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                     <div class="user-info">
                         <span class="user-name">Uchiha Itachi</span>
                         <span class="user-id">@Uchiha_Itachi_2MGS</span>
@@ -425,18 +430,18 @@
             <div class="left container">
                 <div class="user-block">
                     <a href="#">
-                        <img class="user-avt" src="resources/img/Avt_Itachi.PNG">
+                        <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
                         <div class="user-info">
                             <span class="user-name">Uchiha Itachi</span>
                             <span class="user-id">@Uchiha_Itachi_2MGS</span>
                         </div>
                     </a>
                 </div>
-                <div class="caption">
+                <div class="caption scroll-hidden">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
                 </div>
                 <div class="video">
-                    <video id='jtx-0-video' playsinline controls loop name="media"><source src="resources/data/video/Video-1.mp4" type="video/mp4"></video>
+                    <video id='jtx-0-video' playsinline controls loop name="media"><source src="../resources/data/video/Video-1.mp4" type="video/mp4"></video>
                 </div>
             </div>
             <div class="center">
@@ -504,7 +509,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right container">
+            <div class="comment-container container">
                 <div class="container scroll-hidden relative">
                 </div>
                 <div class="comment-input input-main">
@@ -515,8 +520,40 @@
                 </div>
             </div>
         </div>
-        <script src="resources/js/functions.js"></script>
     </div>
+    <section>
+        <div class="post-detail popup">
+            <div class="ctn">
+                <div class="left">
+                    <button class="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <video controls playsinline loop>
+                        <source>
+                    </video>
+                    <div class="tools">
+                        Comming soon
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="user-block">
+                    </div>
+                    <div class="caption">
+                    </div>
+                    <div class="itr">
+
+                    </div>
+                    <div class="cmt-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../resources/js/functions.js"></script>
+    <script src="../resources/js/ContentFunctions.js"></script>
+    <script>
+        addContentRowTo('.contents.container');
+    </script>
 </body>
 
 </html>

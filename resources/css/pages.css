@@ -7,6 +7,14 @@ header {
     position: relative;
 }
 
+a {
+    color: black;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
 #main-menu {
     position: fixed;
     height: 50px;
@@ -128,7 +136,7 @@ header {
     display: flex;
 }
 
-.menu-bar .menu-item {
+.menu-item {
     margin: 5px 0px;
     height: 40px;
     min-width: 40px;
@@ -250,10 +258,6 @@ header {
     overflow: hidden;
 }
 
-.circle {
-    border-radius: 100%;
-}
-
 .menu-bar .menu-item.user {
     border-radius: 40px;
     padding: 7px;
@@ -280,7 +284,7 @@ header {
 
 #main {
     display: flex;
-    padding: 20px 5%;
+    padding: 0px 5%;
     background-color: whitesmoke;
     position: relative;
 }
@@ -358,9 +362,9 @@ header {
     padding: 15px;
 }
 
-.friend-block {}
+.friends .user-block {}
 
-.friend-block a {
+.friends .user-block a {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -369,7 +373,7 @@ header {
     text-decoration: none;
 }
 
-.friend-block a img {
+.friends .user-block a img {
     width: 100%;
     height: 100%;
     padding-bottom: 10px;
@@ -387,7 +391,269 @@ header {
     padding: 0px 15%;
 }
 
-.active {
+.menu .active {
     color: rgb(65, 65, 255);
     border-bottom: 3px solid rgb(65, 65, 255);
 }
+
+.tabcontent {
+    padding-top: 20px;
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    grid-gap: 10px;
+    margin: 0px 10%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 1px rgb(194, 194, 194);
+}
+
+.user-list .user-block {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 15px;
+}
+
+.user-list .user-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.user-list .user-block .left {
+    display: flex;
+}
+
+.user-list .user-block .left div {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    justify-content: space-evenly;
+}
+
+.user-list .user-block .left div a {
+    text-align: left;
+}
+
+.user-list .user-block a img {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.user-list .user-block .more {
+    position: relative;
+}
+
+.user-list .user-block .more .toshow {
+    display: none;
+}
+
+.user-list .user-block .more .more-menu {
+    list-style: none;
+    box-shadow: 1px 5px 10px 1px rgb(194, 194, 194);
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+    z-index: 3;
+    position: absolute;
+    background-color: white;
+}
+
+.user-list .user-block .more .more-menu li {
+    padding: 15px;
+    display: block;
+    cursor: pointer;
+    display: flex;
+}
+
+.user-list .user-block .more .more-menu a {
+    color: black;
+    margin: 0px 15px;
+    width: max-content;
+}
+
+.user-list .user-block .more .btn-show {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.user-list .user-block .more .btn-show:hover {
+    background-color: rgba(194, 194, 194, 0.658);
+}
+
+.overview .content {
+    display: flex;
+    flex-direction: column;
+}
+
+#intro {
+    display: flex;
+    width: 70%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 1px rgb(202, 202, 202);
+    border: 1px solid rgb(197, 197, 197);
+}
+
+#intro * {
+    list-style: none;
+}
+
+#intro .left {
+    width: 30%;
+    padding: 20px;
+}
+
+#intro .right {
+    width: 70%;
+    border-left: 1px solid rgb(197, 197, 197);
+}
+
+.overview-tabcontent {
+    padding: 20px;
+    display: none;
+}
+
+.overview-tabcontent.active {
+    display: block;
+}
+
+.info-icon {
+    padding: 15px;
+}
+
+.info-icon i {
+    color: gray;
+    width: 10%;
+    text-align: center;
+    font-size: 150%;
+}
+
+.info-icon span {
+    font-size: 125%;
+}
+
+.info-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-block img {
+    width: 50px;
+    object-fit: cover;
+    height: 50px;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 50%;
+}
+
+.info-block div {
+    width: calc(100% - 100px);
+}
+
+.info-block div span {
+    display: block;
+}
+
+.overview .info-block {
+    margin: 15px;
+}
+
+#intro .tablink.active {
+    background-color: #ECF3FF;
+    color: #1877F2;
+}
+
+#intro .tablink {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+    cursor: pointer;
+}
+
+.cover-layer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    cursor: default;
+}
+
+.page-content {
+    margin: 30px auto;
+    width: 70%;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 1px 5px 10px 1px rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+#t-storage .content-row div:is(.center, .comment-container, .caption, .user-block) {
+    display: none;
+}
+
+#t-storage video::-webkit-media-controls {
+    display: none !important;
+}
+
+#t-storage .content-row {
+    height: auto;
+    margin: 0px;
+}
+
+#t-storage .content-row .video {
+    height: 100%;
+}
+
+#t-storage .content-row video {
+    width: 100%;
+    height: 100;
+}
+
+#t-storage .storage {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: 20vw;
+    grid-auto-columns: max-content;
+    grid-gap: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #main {
+        flex-direction: column;
+    }
+    #main div:is(.m-left, .m-right) {
+        width: 100%;
+    }
+    #user-menu {
+        flex-direction: column;
+        padding: 0px;
+    }
+    #intro {
+        width: 95%;
+    }
+    .friends-list {
+        grid-template-columns: auto;
+    }
+    #t-storage .storage {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {}

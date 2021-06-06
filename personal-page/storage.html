@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uchiha Itachi | BisBis - Social Video Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../resources/css/style.css" rel="stylesheet">
+    <link href="../resources/css/pages.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../resources/img/Logo.PNG" style="background-color: none;">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="../resources/css/content.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/da46a81a92.js" crossorigin="anonymous"></script>
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
+    <script src="../vendors/js/stickySidebar.js"></script>
+</head>
+
+<body onresize="onResize()" class="scroll-hidden">
+    <header id="header">
+        <div class="menu-bar" id="main-menu">
+            <div class="left">
+                <div id="logo" class="flex clearfix">
+                    <a href="../home/index.html">
+                        <img src="../resources/img/Logo.png">
+                    </a>
+                </div>
+                <div id="searchbar">
+                    <form onsubmit="event.preventDefault();" role="search">
+                        <label for="search">Search for content</label>
+                        <input id="search" type="search" placeholder="Search..." autofocus required />
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div class="menu-item user">
+                    <a href="function:void(0)" class="user-link">
+                        <img class="avt" src="../resources/img/Avt_Itachi.PNG">
+                        <span class="name">Uchiha Itachi</span>
+                    </a>
+                </div>
+                <div id="menu-ctn">
+                    <ul id="head-menu" class="menu">
+                        <li class="menu-item">
+                            <i class="fas fa-home"></i>
+                        </li>
+                        <li class="menu-item">
+                            <i class="far fa-paper-plane"></i>
+                        </li>
+                        <li class="menu-item">
+                            <div id="notify">
+                                <span>9+</span>
+                                <i class="far fa-bell"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="menu-more" class="circle dropdown-menu menu-item">
+                    <i class="fas fa-caret-down"></i>
+                    <div class="dropdown-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background">
+            <div style="position:relative;">
+                <img src="../resources/img/Franxx_BG.jpg">
+                <button>
+                <i class="fas fa-camera-retro"></i>
+                <input id="wallupload" type="file" accept="image/*" class="hidden">
+                <label style="cursor: pointer;" for="wallupload" name="wallupload">Chỉnh sửa ảnh bìa</label>
+            </button>
+            </div>
+            <div class="avt">
+                <div>
+                    <img src="../resources/img/Avt_Itachi.PNG">
+                    <button>
+                        <input type="file" accept="image/*" id="avtupload" class="hidden">
+                        <label for="avtupload">
+                            <i class="fas fa-camera-retro"></i>
+                        </label>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="name">
+            <h3>Uchiha Itachi</h3>
+            <span>Giỏi từ bé</span>
+        </div>
+        <hr color="#dcdcdc" style="height: 2px; border-radius: 5px;" />
+    </header>
+    <div class="menu-bar" id="user-menu">
+        <ul class="menu">
+            <li class="menu-item tablink">
+                <a href="personal_page.html">
+                Bài viết
+                </a>
+            </li>
+            <li class="menu-item tablink">
+                <a href="profile.html">Giới thiệu</a>
+
+            </li>
+            <li class="menu-item tablink">
+                <a href="friends.html">Bạn bè</a>
+            </li>
+            <li class="menu-item tablink">
+                <a href="following.html">Đang theo dõi</a>
+
+            </li>
+            <li class="menu-item tablink active" onclick="scrollToMenu()">
+                Kho lưu trữ
+            </li>
+        </ul>
+        <div class="right">
+            <a class="upload button"><i class="fas fa-plus-circle"></i>Tải lên</a>
+            <a class="edit button"><i class="fas fa-pencil-alt"></i>Chỉnh sửa trang cá nhân</a>
+            <a class="more button"><i class="fas fa-ellipsis-h"></i></a>
+        </div>
+    </div>
+    <section>
+        <div class="post-detail popup">
+            <div class="ctn">
+                <div class="left">
+                    <button class="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <video controls playsinline loop>
+                        <source>
+                    </video>
+                    <div class="tools">
+                        Comming soon
+                    </div>
+                </div>
+                <div class="right scroll-hidden">
+                    <div class="user-block">
+                    </div>
+                    <div class="caption">
+                    </div>
+                    <div class="itr">
+
+                    </div>
+                    <div class="cmt-container">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="temp">
+        <div class="comment-input temp">
+            <div>
+                <input type="text" placeholder="Bình luận">
+                <button><i class="far fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="comment temp">
+            <div class="user-block">
+                <a href="personal_page.html">
+                    <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
+                    <div class="user-info">
+                        <span class="user-name">Uchiha Itachi</span>
+                        <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                    </div>
+                </a>
+            </div>
+            <div class="comment-content">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quam, fugit laudantium consequuntur aut amet officia explicabo dolor laboriosam corrupti. Laborum aut placeat qui eius at quia porro, suscipit reiciendis.
+                </p>
+                <div class="like-count">
+                    <i class="cmt-heart far fa-heart"></i>
+                    <span class="count">0</span>
+                </div>
+            </div>
+            <div class="interactive">
+                <div>
+                    <span class="opacity">36 phút trước</span>
+                    <a href="#" class="reply"><i class="fas fa-reply"></i>Trả lời</a>
+                    <div class="cmt-like">
+                        <input type="checkbox">
+                        <label><i class="cmt-heart far fa-heart"></i>Thích</label>
+                    </div>
+                    <div class="comment-more">
+                        <a class="btn-show" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-menu temp">
+            <div class="cover-layer"></div>
+            <ul>
+                <li>
+                    <a class="del" href="#"><i class="fas fa-trash-alt"></i>Xóa bình luận</a>
+                </li>
+            </ul>
+        </div>
+        <div class="row content-row temp">
+            <div class="left container">
+                <div class="user-block">
+                    <a href="#">
+                        <img class="user-avt" src="../resources/img/Avt_Itachi.PNG">
+                        <div class="user-info">
+                            <span class="user-name">Uchiha Itachi</span>
+                            <span class="user-id">@Uchiha_Itachi_2MGS</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="caption scroll-hidden">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quod sunt illo reiciendis possimus pariatur ipsa, quia perspiciatis neque nam optio illum architecto nulla doloremque veniam. Unde eos iure assumenda.
+                </div>
+                <div class="video">
+                    <video id='jtx-0-video' controls loop name="media"><source src="../resources/data/video/Video-1.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+            <div class="center">
+                <div class="interactive">
+                    <div class="interactive-btn like">
+                        <div>
+                            <form>
+                                <span id="jtx-0-like-count"></span>
+                                <input type="checkbox" class="like-checkbox" />
+                                <label>
+                                <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                                <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
+                                <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5"/>
+
+                                <g id="grp7" opacity="0" transform="translate(7 6)">
+                                <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
+                                <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
+                                </g>
+                                
+                                <g id="grp6" opacity="0" transform="translate(0 28)">
+                                <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
+                                <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
+                                </g>
+
+                                <g id="grp3" opacity="0" transform="translate(52 28)">
+                                <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2"/>
+                                <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2"/>
+                                </g>
+
+                                <g id="grp2" opacity="0" transform="translate(44 6)">
+                                <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2"/>
+                                <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2"/>
+                                </g>
+
+                                <g id="grp5" opacity="0" transform="translate(14 50)">
+                                <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2"/>
+                                <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2"/>
+                                </g>
+
+                                <g id="grp4" opacity="0" transform="translate(35 50)">
+                                <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2"/>
+                                <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2"/>
+                                </g>
+
+                                <g id="grp1" opacity="0" transform="translate(24)">
+                                <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2"/>
+                                <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2"/>
+                                </g>
+                                </g>
+                                </svg>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                    <div class=" interactive-btn comment">
+                        <button>
+                        <i class="far fa-comment-dots"></i>
+                            </button>
+                    </div>
+                    <div class="interactive-btn share">
+                        <button>
+                        <i class="far fa-share-square"></i>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-container container">
+                <div class="container scroll-hidden relative">
+                </div>
+                <div class="comment-input input-main">
+                    <div>
+                        <input type="text" placeholder="Bình luận">
+                        <button><i class="far fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div id="t-storage" class="tabcontent page-content">
+            <div class="storage">
+
+            </div>
+        </div>
+    </section>
+    <!-- Popup panel -->
+    <section>
+        <div id="upload-video" class="popup">
+            <div class="cover-layer"></div>
+            <div class="videoupload page-content">
+                <div class="title">
+                    <span>Tạo bài viết</span>
+                    <button class="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="input-caption">
+                    <textarea rows="6" id="caption" placeholder="Mô tả về video của bạn"></textarea>
+                </div>
+                <div class="btns">
+                    <input id="videoupload" type="file" name="videoupload" class="hidden" accept="video/*">
+                    <label for="videoupload" for="">
+                        <i class="fas fa-plus"></i>Tải lên
+                    </label>
+                    <button>
+                        <i class="fas fa-upload"></i>Đăng tải
+                    </button>
+                </div>
+                <div class="vd">
+                    <video autoplay name="media">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../resources/js/pages-js.js"></script>
+    <script src="../resources/js/ContentFunctions.js"></script>
+    <script src="../resources/js/functions.js"></script>
+    <script>
+        addContentRowTo('#t-storage .storage');
+    </script>
+</body>
+
+</html>
