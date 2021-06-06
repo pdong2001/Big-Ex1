@@ -1,0 +1,209 @@
+#main {
+    padding: 0px;
+}
+
+.filter {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+}
+
+#main .page-content {
+    margin: 0px;
+    width: auto;
+}
+
+#main .filter {
+    height: calc(100vh - 50px);
+    width: 20%;
+    padding: 30px 10px !important;
+}
+
+#main .filter .icon {
+    height: 35px;
+    width: 35px;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(220, 220, 220);
+    font-size: 15px;
+}
+
+#main .title {
+    font-weight: bold;
+    font-size: 130%;
+    display: block;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+#main .filter ul {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+#main .filter ul li {
+    padding: 5px 0px;
+    border-radius: 10px;
+}
+
+#main .filter ul li a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 120%;
+    color: black;
+}
+
+#main .filter ul li:hover {
+    background-color: whitesmoke;
+}
+
+#main .filter ul li.active {
+    background-color: #ECF3FF !important;
+}
+
+#main .filter ul li.active .icon {
+    color: white;
+    background-color: #1877F2 !important;
+}
+
+#main .results {
+    margin-left: 35%;
+    width: 50%;
+}
+
+#main .showall {
+    padding: 10px;
+    display: block;
+    margin: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    background: rgb(200, 200, 200);
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.people {
+    margin: 30px 0px !important;
+}
+
+.people .user-block {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.people .user-block:not(:last-child) {
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.people .user-block .common {
+    list-style: none;
+    opacity: 0.6;
+}
+
+.people .user-block .left {
+    display: flex;
+}
+
+.people .user-block .name {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.people .user-block .left div {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+    justify-content: space-evenly;
+}
+
+.people .user-block .left div a {
+    text-align: left;
+}
+
+.people .user-block a img {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.people .user-block .state {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.people .user-block .state:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+.results .post {
+    margin: 30px 0px !important;
+}
+
+.results .content-row {
+    margin: 20px 0px;
+}
+
+.results .content-row div:is(.center, .comment-container) {
+    display: none;
+}
+
+.results .content-row video::-webkit-media-controls {
+    display: none;
+}
+
+.results .content-row {
+    height: 30vh;
+}
+
+.results .content-row .left {
+    display: grid;
+    grid-template-areas: 'user user video' 'caption caption video';
+    grid-template-rows: 35% 65%;
+}
+
+.results .content-row .user-block {
+    grid-area: user;
+}
+
+.results .content-row .caption {
+    grid-area: caption;
+    height: 100%;
+}
+
+.results .content-row .caption p {
+    cursor: pointer;
+}
+
+.results .content-row .video {
+    grid-area: video;
+    height: 100%;
+    width: 100%;
+}
+
+.results .content-row .video video {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .results {
+        width: 80% !important;
+        margin-left: 20% !important;
+    }
+}

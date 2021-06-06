@@ -25,7 +25,7 @@ function createUserBlock(ID = '', Name = '', Avt = '', Link = '') {
 
 function addProposeRow() {
 
-    document.getElementById('propose').appendChild(createUserBlock('Uchiha_Itachi', 'Uchiha Itachi', 'resources/img/Avt_Itachi.PNG'));
+    document.getElementById('propose').appendChild(createUserBlock('Uchiha_Itachi', 'Uchiha Itachi', '../resources/img/Avt_Itachi.PNG'));
 
 };
 for (var i = 0; i < 10; i++) {

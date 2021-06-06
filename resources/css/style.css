@@ -276,3 +276,19 @@ body {
 .user-info span {
     display: block;
 }
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-content {
+    width: fit-content;
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+    top: 100%;
+}
+
+.right .circle {
+    border-radius: 100%;
+}

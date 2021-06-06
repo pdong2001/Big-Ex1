@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uchiha Itachi | BisBis - Social Video Network</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/pages.css" rel="stylesheet" type="text/css">
+    <link href="../resources/css/search.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../resources/img/Logo.PNG" style="background-color: none;">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="../resources/css/content.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/da46a81a92.js" crossorigin="anonymous"></script>
+    <script src="../vendors/js/jquery-3.6.0.js"></script>
+</head>
+
+<body onresize="onResize()" class="scroll-hidden">
+    <header id="header">
+        <div class="menu-bar" id="main-menu">
+            <div class="left">
+                <div id="logo" class="flex clearfix">
+                    <a href="../index.html">
+                        <img src="../resources/img/Logo.png">
+                    </a>
+                </div>
+                <div id="searchbar">
+                    <form onsubmit="event.preventDefault();" role="search">
+                        <label for="search">Search for content</label>
+                        <input id="search" type="search" placeholder="Search..." autofocus required />
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div class="menu-item user">
+                    <a href="../personal-page/personal_page.html" class="user-link">
+                        <img class="avt" src="../resources/img/Avt_Itachi.PNG">
+                        <span class="name">Uchiha Itachi</span>
+                    </a>
+                </div>
+                <div id="menu-ctn">
+                    <ul id="head-menu" class="menu">
+                        <li class="menu-item">
+                            <i class="fas fa-home"></i>
+                        </li>
+                        <li class="menu-item">
+                            <i class="far fa-paper-plane"></i>
+                        </li>
+                        <li class="menu-item">
+                            <div id="notify">
+                                <span>9+</span>
+                                <i class="far fa-bell"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="menu-more" class="circle dropdown-menu menu-item">
+                    <i class="fas fa-caret-down"></i>
+                    <div class="dropdown-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Templates -->
+
+    <!-- Main -->
+    <section>
+
+        <div id="main">
+            <div class="filter page-content">
+                <span style="border-bottom: 1px solid;" class="title">Kết quả tìm kiếm</span>
+                <span style="font-weight:bold;
+                font-size: 130%; margin: 10px 0px;
+                display: block">Bộ lọc</span>
+                <ul>
+                    <li>
+                        <a href="all.html">
+                            <span class="icon"><i class="fas fa-mail-bulk"></i></span>
+                            <span>
+                            Tất cả
+                        </span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="people.html">
+                            <span class="icon">
+                            <i class="far fa-address-card"></i>
+                        </span>
+                            <span>
+                            Mọi người
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="posts.html">
+                            <span class="icon">
+                            <i class="far fa-edit"></i>
+                        </span>
+                            <span>
+                            Bài viết
+                        </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="results">
+                <div class="people page-content">
+                    <span class="title">Mọi người</span>
+                    <div class="container">
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-1.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 1</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng tỉnh</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-2.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 2</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-3.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 3</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng một nhóm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-4.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 4</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng trường Đại Học</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-1.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 1</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng tỉnh</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-2.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 2</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-3.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 3</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng một nhóm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-4.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 4</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng trường Đại Học</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-1.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 1</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng tỉnh</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-2.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 2</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-3.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 3</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng một nhóm</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="far fa-paper-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="user-block">
+                            <div class="left">
+                                <a href="#"><img src="../resources/img/Avt-4.jpg"></a>
+                                <div>
+                                    <a href="#" class="name">Người dùng 4</a>
+                                    <ul class="common">
+                                        <li>
+                                            <a href="#">99 bạn chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Cùng trường Đại Học</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="state">
+                                <span><i class="fas fa-user-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../resources/js/ContentFunctions.js"></script>
+    <script src="../resources/js/functions.js"></script>
+</body>
+
+</html>

@@ -15,12 +15,8 @@
     margin: 10px;
 }
 
-.center {
-    width: 15%;
-}
-
 .content-row .left,
-.content-row .right,
+.content-row .comment-container,
 .content-row .center {
     display: flex;
     flex-direction: column;
@@ -53,7 +49,7 @@
     flex-direction: column-reverse;
 }
 
-.content-row .center .interactive {
+.interactive {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +60,7 @@
     margin: 10px;
 }
 
-.center button {
+.interactive button {
     font-size: 200%;
     color: rgb(65, 65, 65);
     outline: none;
@@ -72,7 +68,7 @@
     background: none;
 }
 
-.right .comment {
+.comment-container .comment {
     margin: 5px;
 }
 
@@ -428,16 +424,28 @@
         display: block;
         height: fit-content;
     }
-    .center .interactive {
+    .content-row .comment-container {
+        max-height: 30vh;
+    }
+    .row-content .center .interactive {
         flex-direction: row;
     }
-    .center {
+    .row-content .center {
         border-top: 1px solid;
         border-bottom: 1px solid;
         width: 100%;
     }
-    .right .scroll-hidden {
+    .row-content .comment-container .scroll-hidden {
         height: 50vh;
+    }
+    #head-menu {
+        flex-direction: column;
+    }
+    .center {
+        width: 100%;
+    }
+    #main-menu {
+        z-index: 3;
     }
 }
 
@@ -451,6 +459,9 @@
     .center {
         border-left: 1px solid;
         border-right: 1px solid;
+    }
+    .center {
+        width: 15%;
     }
 }
 
@@ -504,4 +515,188 @@
     width: 50px;
     font-size: 150%;
     border-radius: 100%;
+}
+
+.popup {
+    position: fixed;
+    z-index: 2;
+    display: none;
+}
+
+.post-detail {
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.post-detail .ctn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.post-detail .ctn .left {
+    width: 75%;
+    position: relative;
+    background-color: black;
+}
+
+.post-detail .ctn .right {
+    width: 25%;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.post-detail .ctn .left video {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.post-detail .left button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    border: none;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    font-size: 15px;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.post-detail .right .user-block {
+    margin: 20px;
+}
+
+.post-detail .right .caption {
+    height: fit-content;
+}
+
+.post-detail .itr .interactive {
+    justify-content: space-evenly;
+    border-top: 1px solid rgb(220, 220, 220);
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.post-detail .comment-container {
+    position: initial;
+    padding-bottom: 55px;
+}
+
+.post-detail .input-main {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 25%;
+    display: block;
+}
+
+#upload-video {
+    display: none;
+}
+
+.videoupload {
+    position: fixed;
+    width: 60%;
+    height: fit-content;
+    z-index: 10;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.videoupload textarea {
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    font-size: 150%;
+    border: none;
+}
+
+.videoupload label {
+    color: white;
+    background-color: #e2264d;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.videoupload .input-caption {
+    border: 1px solid;
+}
+
+.videoupload div {
+    margin: 5px;
+}
+
+.videoupload video {
+    max-width: 100%;
+    height: 40vh;
+    border-radius: 5px;
+}
+
+.videoupload .vd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoupload button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+}
+
+.videoupload .btns button {
+    outline: none;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.videoupload .btns i {
+    margin-right: 10px;
+}
+
+.videoupload .btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20%;
+}
+
+.videoupload .title {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoupload .title span {
+    font-size: 150%;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.videoupload .title button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
 }

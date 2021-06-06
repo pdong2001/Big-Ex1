@@ -5,22 +5,33 @@
     position: relative;
 }
 
+#menu-left .menu-item .icon {
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+#menu-left .menu-item:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+#menu-left .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
 #main {
     height: calc(100vh - 50px);
 }
 
 a {
     text-decoration: none;
-}
-
-#menu-left .center {
-    display: flex;
-    margin: 5px;
-}
-
-#menu-left .center span {
-    position: relative;
-    left: 26px;
 }
 
 #propose .user-block {
